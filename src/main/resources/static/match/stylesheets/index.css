@@ -233,28 +233,57 @@ display:block;
 .together{
     width:166px;
 }
+/*download-btn*/
 
-.download-box{
-    position:relative;
-    width:100%;
-}
-#download_place{
+.download-btn-box{
     position:absolute;
-    top:20px;
-    right:0;
+    top:125px;
+    right:20px;
+}
+.btn-all{
+    width:150px;
+    height:60px;
+    text-decoration:none;
+    color:white;
+    border-radius:4px;
+    background:darkturquoise;
+    padding:15px;
+    position:relative;
+}
+.btn-all:hover {
+    color:white;
+    text-decoration:none;
+}
+.btn-all:hover .all-symbol{
+    opacity: 0;
+}
+.all-slide-down{
+    position:absolute;
+    top:-35px;
+    width:22px;
+    height:22px;
+    background:transparent url("../img/arrow_down_black.png") no-repeat top left;
+    left:15px;
+    opacity:0.6;
+}
+.btn-all:hover .all-slide-down{
+    -webkit-animation:slideDown 0.9s linear infinite;
+    -moz-animation:slideDown 0.9s linear infinite;
+    animation:slideDown 0.9s linear infinite;
 }
 .btn-download{
 
     width:160px;
     height:60px;
-    text-decoration:underline;
+    text-decoration:none;
     color:white;
     border-radius:4px;
     background:#146eb4;
     padding:15px 30px;
     margin-right:-10px;
-
+    position:relative;
 }
+
 /*slide*/
 .btn-slide-icon{
     position:absolute;
@@ -267,6 +296,7 @@ display:block;
 }
 .btn-download:hover{
     color:white;
+    text-decoration:none;
 }
 .btn-download:hover .btn-slide-icon{
     -webkit-animation:slideDown 0.9s linear infinite;

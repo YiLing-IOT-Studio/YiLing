@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -125,7 +125,7 @@
 
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/special.jpg">
+                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/special.jpg"/>
                         <div class="caption">
 
 
@@ -160,8 +160,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/one.jpg"
-                        >
+                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/one.jpg"/>
                         <div class="caption">
 
                             <a data-toggle="modal" data-target="#myModal2" href="#"><span class="prize-text">一等奖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="work-text">智能药箱</span></a>
@@ -194,8 +193,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/two.jpg"
-                        >
+                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/two.jpg"/>
                         <div class="caption">
                             <a  data-toggle="modal" data-target="#myModal3" href="#"><span class="prize-text">二等奖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="work-text">智能指环|智能扶梯</span></a>
                             <div class="modal fade" id="myModal3" tabindex="-1" role="dialog"
@@ -232,8 +230,7 @@
             <div class="row">
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/three.jpg"
-                        >
+                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/three.jpg"/>
                         <div class="caption">
                             <a data-toggle="modal" data-target="#myModal5" href="#"><span class="prize-text">三等奖</span><span class="work-text">智能健康贴|智能座椅|智能车牌</span></a>
                             <div class="modal fade" id="myModal5" tabindex="-1" role="dialog"
@@ -266,8 +263,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/nice.jpg"
-                        >
+                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/nice.jpg"/>
                         <div class="caption">
                             <a data-toggle="modal" data-target="#myModal6" href="#"><span class="prize-text">优胜奖</span><span class="work-text">smart宠儿|共享书籍|校园自行车智能管理系统|贴心智能帽</span></a>
                             <div class="modal fade" id="myModal6" tabindex="-1" role="dialog"
@@ -302,8 +298,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/all.jpg"
-                        >
+                        <img src="http://p22svme3d.bkt.clouddn.com/competition/img/all.jpg"/>
                         <div class="caption">
                             <a data-toggle="modal" data-target="#myModal7" href="#"><span class="together prize-text">创意大赛全体人员合影</span><span class="work-text">全体参赛队员、评委老师、及工作人员赛后合影</span></a>
                             <div class="modal fade" id="myModal7" tabindex="-1" role="dialog"
@@ -342,19 +337,26 @@
     <div id="enter" class="get-started text-center" >
     <section>
         <div class="container has-padding">
-            <form action="/submit" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+            <form action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
                 <div class="row download-box">
                     <h2 class="h2">
                         <span>报名参赛</span>
                     </h2>
-                    <div id="download_place">
-                        <a href="/fileDownload"  class="btn-download">
+                    <div class="download-btn-box">
+                        <security sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                            <a href="#" class="btn-all">
+                                <span class="all-symbol"><img src="match/img/arrow_down_black.png"/></span>
+                                <span class="all-text">下载参赛创意</span>
+                                <span class="all-slide-down"></span>
+                            </a>
+                        </security>
+                        <a href="#"  class="btn-download">
                             <span class="download-symbol"><img src="match/img/arrow_down_black.png"/></span>
                             <span class="download-text">下载报名表</span>
                             <span class="btn-slide-icon"></span>
                         </a>
-                    </div>
 
+                    </div>
 
                 </div>
 
@@ -366,6 +368,7 @@
                     </div>
                 </div>
                 <div class="row">
+
                     <div class="submit-box">
                         <input type="submit" name="submit" value="提交" id="submit" class="btn-submit"/>
                     </div>

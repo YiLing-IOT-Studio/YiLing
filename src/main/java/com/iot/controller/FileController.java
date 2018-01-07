@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -35,7 +36,7 @@ public class FileController {
 
     @RequestMapping(value = "/submit", method = RequestMethod.POST)
     @ResponseBody
-    public String uploadFile(HttpServletRequest request, HttpServletResponse response, @RequestParam(value = "file") MultipartFile multipartFile) throws UnsupportedEncodingException, ServletException {
+    public ModelAndView uploadFile(HttpServletRequest request, HttpServletResponse response, @RequestParam(value = "file") MultipartFile multipartFile) throws UnsupportedEncodingException, ServletException {
 
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
@@ -44,21 +45,27 @@ public class FileController {
         Long length = multipartFile.getSize();//返回的是字节，1M=1024KB=1048576字节 1KB=1024Byte
         String fileName = multipartFile.getOriginalFilename();
         String suffix = fileName.substring(fileName.lastIndexOf(".")).toLowerCase().trim();//文件后缀名
+        //String prefix = fileName.substring(0,fileName.lastIndexOf("."));//文件后缀名
 
         String fileType = ".txt,.docx,.doc";
         //String[] typeArray = fileType.split(",");
 
+        String error[] = {"文件内容为空 ！","文件大小限制1M ！","文件后缀名有误 ！","提交成功！","提交失败，请与工作人员联系"};
+
+        ModelAndView mav = new ModelAndView();
+
         if (multipartFile.isEmpty()) {
-
-            return "redirect:/match";
-
+            mav.setViewName("message");
+            mav.addObject("error",error[0]);
+            return mav;
         } else if (length > 1048576) {
-
-            return "redirect:/match";
-
+            mav.setViewName("message");
+            mav.addObject("error",error[1]);
+            return mav;
         } else if (!Arrays.asList(fileType.split(",")).contains(suffix)) {
-
-            return "redirect:/match";
+            mav.setViewName("message");
+            mav.addObject("error",error[2]);
+            return mav;
         }
 
         Files files = new Files();
@@ -72,10 +79,17 @@ public class FileController {
         try {
             FileUtil.uploadFile(filePath, fileName, multipartFile);
             fileRepository.save(files);
+
+            mav.setViewName("message");
+            mav.addObject("error",error[3]);
+            return mav;
         } catch (Exception e) {
             e.printStackTrace();
+
+            mav.setViewName("message");
+            mav.addObject("error",error[4]);
+            return mav;
         }
-        return "success";
     }
 
     @RequestMapping(value = "/fileDownload")

@@ -132,7 +132,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>OfficeSite</finalName>
+		<finalName>YiLing</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -140,6 +140,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>
