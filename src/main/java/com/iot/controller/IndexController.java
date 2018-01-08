@@ -15,13 +15,8 @@ public class IndexController {
     }
 
     @RequestMapping("/glory")
-    public String glory(){
-        return  "glory";
-    }
-
-    @RequestMapping("/joinus")
-    public String index() {
-        return "joinus";
+    public String glory() {
+        return "glory";
     }
 
     @RequestMapping("/info")
@@ -32,11 +27,6 @@ public class IndexController {
     @RequestMapping("/manager")
     public String manger() {
         return "manager";
-    }
-
-    @RequestMapping("/match")
-    public String competition() {
-        return "match";
     }
 
     @RequestMapping("/registration")
@@ -55,37 +45,37 @@ public class IndexController {
     }
 
     @RequestMapping("/family")
-    public String aboutus_other(){
+    public String aboutus_other() {
         return "family";
     }
 
     @RequestMapping("/aboutus")
-    public String about(){
+    public String about() {
         return "aboutUs";
     }
 
     @RequestMapping("/direction")
-    public String direction(){
+    public String direction() {
         return "main";
     }
 
     @RequestMapping("/android")
-    public String android(){
+    public String android() {
         return "android";
     }
 
     @RequestMapping("/flush")
-    public String flush(){
+    public String flush() {
         return "flushbonading";
     }
 
     @RequestMapping("/end")
-    public String back(){
+    public String back() {
         return "webBack";
     }
 
     @RequestMapping("/fronted")
-    public String fronted(){
+    public String fronted() {
         return "webFronted";
     }
 }
