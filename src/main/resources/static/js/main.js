@@ -58,9 +58,6 @@ $(document).ready(function() {
         lazyLoading: true,
 
         //events
-        onLeave: function(index, nextIndex, direction) {
-
-        },
         afterLoad: function(anchorLink, index) {
             if (index === 1) {
                 $('.yl-intro').html(`<div><span class="lead">翼灵物联工作室</span> - 一支追求技术、开发与自由的大学生团队。</div>
@@ -325,7 +322,7 @@ $(document).ready(function() {
                 })();
             }
             if (index === 3) {
-                $('.card-list').html(` <div class="card card-em animated">
+                $('.card-list').html(` <div class="card card-em">
                     <img src="../static/img/sc-data-128.png" class="card-img-top" alt="embedded" />
                     <section class="card-body">
                         <div class="card-title">嵌入式</div>
@@ -364,7 +361,7 @@ $(document).ready(function() {
                         </div>
                         <a href="/fronted" class="btn btn-learn-more btn-sm">学习 Web 前端</a>
                     </section>
-                </div>`);
+                </div>`).addClass('animated');
             }
             if (index === 4) {
                 $('.members').html(`<div class="single-member effect-1">
