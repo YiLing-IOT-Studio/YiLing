@@ -171,10 +171,10 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 999;
-    border: 2px solid #fff;
+    /* z-index: 999; */
+    /* border: 2px solid #fff;
     border-radius: 10px;
-    box-shadow: 1px 5px 5px #666;
+    box-shadow: 1px 5px 5px #666; */
 }
 
 .nav-item {
