@@ -63,14 +63,8 @@ $(document).ready(function() {
                 $('.yl-intro').html(`<div><span class="lead">翼灵物联工作室</span> - 一支追求技术、开发与自由的大学生团队。</div>
                 <div class="yl-translation">YiLing-ers pursue technology, openness and freedom.</div>`);
                 $('.h2, .h5, .yl-intro, .btn-group').addClass('animated fadeIn');
-                $('.sec-body-for-login').html(`<a href="http://www.swpuiot.com/" target="_blank" class="yl-website-link text-center">
-                    <span class="website-info">签到系统</span>
-                </a>
-                <a href="#" target="_blank" class="yl-website-link text-center">
-                    <span class="website-info">博客系统</span>
-                </a>
-                <a href="#" target="_blank" class="yl-website-link text-center">
-                    <span class="website-info">翼灵基因</span>
+                $('.sec-body-for-login').html(`<a class="btn btn-success" href="http://www.swpuiot.com/" target="_blank" class="yl-website-link text-center">
+                    <span class="website-info">前往签到系统</span>
                 </a>`);
             }
             if (index === 2) {
@@ -425,12 +419,12 @@ $(document).ready(function() {
                             </a>
                         </div>
                     </div>
-                </div>`);
+                </div>`).addClass('animated');
             }
             if (index === 5) {
                 $('.yl-intro').html(`<p>我们是一支以嵌入式开发特色，以云端、手机端、PC 端协作开发的团队。<br/><span class="yl-translation">We are a team developing Embedded system specially, and collaborative with Cloud, Mobile and PC development.</span></p>
             <p>如果你有改变世界的想法，如果你有脚踏实地的耐力，<br/><span class="yl-translation">If you have the idea of changing the world, or have a down-to-earth endurance,</span>
-            </p><p>那么，你正是我们在找的人！<br/><span class="yl-translation">we\'ll want you!</span></p>`);
+            </p><p>那么，你正是我们在找的人！<br/><span class="yl-translation">we\'ll want you!</span></p>`).addClass('animated');
             }
             if (index === 6) {
                 $('.yl-website').html(
@@ -453,7 +447,7 @@ $(document).ready(function() {
                     </a>
                     <a href="/joinus" target="_blank" class="yl-website-link text-center">
                         
-                        <span class="website-info">招新系统</span>
+                        <span class="website-info">招新网站</span>
                     </a>
                     <a href="javascript:void(0);" target="_blank" class="yl-website-link text-center">
                         
@@ -535,6 +529,18 @@ $(document).ready(function() {
             }
             if (index === 4 && direction === 'up') {
                 $('.card-list').addClass('zoomIn').removeClass('zoomOut');
+            }
+            if (index === 4 && direction === 'down') {
+                $('.members').removeClass('zoomIn').addClass('zoomOut');
+            }
+            if (index === 5 && direction === 'up') {
+                $('.members').addClass('zoomIn').removeClass('zoomOut');
+            }
+            if (index === 5 && direction === 'down') {
+                $('.joinus-sec').removeClass('zoomIn').addClass('zoomOut');
+            }
+            if (index === 6 && direction === 'up') {
+                $('.joinus-sec').addClass('zoomIn').removeClass('zoomOut');
             }
         },
         afterRender: function() {
