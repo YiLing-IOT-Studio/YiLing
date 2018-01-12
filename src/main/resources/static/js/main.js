@@ -660,17 +660,23 @@ $(document).ready(function() {
                 $(this).parent().remove('has-warning');
             }
         });
-        $('#submitBtn').click(function(event) {
+        $('#inSubmitButton').click(function(event) {
             event.preventDefault();
             $.ajax({
-                type: 'POST',
-                url: '',
+                type: 'post',
+                url: '/login1',
                 dataType: 'json',
                 data: {
                     'username': $('#username').val(),
                     'password': $('#password').val()
                 },
-                success: function() {
+                // success: function() {
+                //     console.log('login success');
+                // },
+                // error: function() {
+                //     console.log('login error');
+                // }
+                success: function (data,status) {
                     console.log('login success');
                 },
                 error: function() {
