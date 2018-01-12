@@ -2,6 +2,7 @@ package com.iot.config;
 
 import net.sf.json.JSONObject;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 
 import javax.servlet.ServletException;
@@ -13,8 +14,14 @@ import java.io.IOException;
  * Created by 李攀 on 2018/1/11.
  */
 public class AjaxAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
+
+    public String getCurrentUsername() {
+        return SecurityContextHolder.getContext().getAuthentication().getName();
+    }
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+
         //response.setStatus(HttpServletResponse.SC_OK);
 
         boolean isAjax = UnauthorizedEntryPoint.isAjaxRequest(request);
@@ -24,6 +31,7 @@ public class AjaxAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandle
             JSONObject returnObj = new JSONObject();
             returnObj.put("status", "1");
             returnObj.put("data", principal);
+            //returnObj.put("username");
             response.getWriter().print(returnObj.toString());
             response.getWriter().flush();
         } else {

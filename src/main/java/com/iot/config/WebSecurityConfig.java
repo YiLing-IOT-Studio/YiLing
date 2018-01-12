@@ -67,6 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .successHandler(new AjaxAuthSuccessHandler())
                 .failureHandler(new AjaxAuthFailHandler())
                 .permitAll()
-                .and().logout().permitAll().and().csrf().disable();
+                .and().logout().permitAll()
+                .and().csrf().disable();
     }
 }

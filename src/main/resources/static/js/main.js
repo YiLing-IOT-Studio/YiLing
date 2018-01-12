@@ -63,7 +63,7 @@ $(document).ready(function() {
                 $('.yl-intro').html(`<div><span class="lead">翼灵物联工作室</span> - 一支追求技术、开发与自由的大学生团队。</div>
                 <div class="yl-translation">YiLing-ers pursue technology, openness and freedom.</div>`);
                 $('.h2, .h5, .yl-intro, .btn-group').addClass('animated fadeIn');
-                $('.sec-body-for-login').html(`<a class="btn btn-success" href="http://www.swpuiot.com/" target="_blank" class="yl-website-link text-center">
+                $('.sec-body-for-login').html(`<a class="btn btn-success" href="/signDetail" target="_blank" class="yl-website-link text-center">
                     <span class="website-info">前往签到系统</span>
                 </a>`);
             }
@@ -603,10 +603,30 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    var storage = window.sessionStorage;
+    var userObj = {username: null};
+
+    if (parseInt(storage.getItem('loginState')) === 1) {
+        $('#signInModal').modal('hide');
+        $('.nav-item-js').css('display', 'block');
+        $('.nav-item-logout').css('display', 'block');
+        $('.sec-body-for-login').css('display', 'block');
+        $('.nav-item-login').css('display', 'none');
+        $('.login-btn').css('display', 'none');
+        $('#user').text(storage.getItem('username'));
+    } else {
+        $('.nav-item-js').css('display', 'none');
+        $('.nav-item-logout').css('display', 'none');
+        $('.sec-body-for-login').css('display', 'none');
+        $('.nav-item-login').css('display', 'display');
+        $('.login-btn').css('display', 'display');
+    }
 
     (function() {
         $('#inSubmitButton').click(function(event) {
             event.preventDefault();
+            userObj.username = $('#username').val();
+            storage.setItem('username', userObj.username);
             $.ajax({
                 type: 'post',
                 url: '/login1',
@@ -617,14 +637,29 @@ $(document).ready(function() {
                 },
                 success: function(data) {
                     console.log('login success');
-                    if (data.status === 1) {
+                    storage.setItem('loginState', data.status);
+                    if (parseInt(storage.getItem('loginState')) === 1) {
                         $('#signInModal').modal('hide');
+                        $('.nav-item-js').css('display', 'block');
+                        $('.nav-item-logout').css('display', 'block');
+                        $('.sec-body-for-login').css('display', 'block');
+                        $('.nav-item-login').css('display', 'none');
+                        $('.login-btn').css('display', 'none');
+                        $('#user').text(storage.getItem('username'));
                     }
                 },
                 error: function() {
                     console.log('login error');
                 }
             });
+        });
+        $('.nav-item-logout').click(function(){
+            storage.clear();
+            $('.nav-item-js').css('display', 'none');
+            $('.nav-item-logout').css('display', 'none');
+            $('.sec-body-for-login').css('display', 'none');
+            $('.nav-item-login').css('display', 'display');
+            $('.login-btn').css('display', 'display');
         });
     })();
 

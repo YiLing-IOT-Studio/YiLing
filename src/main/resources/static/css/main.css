@@ -265,10 +265,16 @@
 }
 
 .sec-body-for-login {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -25%);
+}
+
+.nav-item-js,
+.nav-item-logout {
+    display: none;
 }
 
 .sec-tip {

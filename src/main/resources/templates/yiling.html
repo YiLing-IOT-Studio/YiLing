@@ -44,20 +44,18 @@
                         </li>
                         <li class="nav-item">
                             <span class="line line-top"></span>
-                            <!--<a class="nav-link" href="http://119.23.202.55:8080/"><i class="fa fa-paper-plane"></i>加入我们</a>-->
                             <a class="nav-link" href="/joinus"><i class="fa fa-paper-plane"></i>加入我们</a>
                             <span class="line line-bottom"></span>
                         </li>
-                        <li class="nav-item nav-item-js" sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
-                            <!--<a class="nav-link" href="#"><i class="fa fa-user"></i>账号名</a>-->
-                            <a class="nav-link" href="/#signin"><i class="fa fa-user"></i><span id="span1" sec:authentication="name"></span></a>
+                        <li class="nav-item nav-item-js">
+                            <a class="nav-link" href="/#signin"><i class="fa fa-user"></i><span id="user"></span></a>
                         </li>
-                        <li class="nav-item" sec:authorize="!hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
+                        <li class="nav-item nav-item-login">
                             <span class="line line-top"></span>
                             <a class="nav-link" href="/#signin"><i class="fa fa-user"></i>个人登录</a>
                             <span class="line line-bottom"></span>
                         </li>
-                        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
+                        <li class="nav-item nav-item-logout">
                             <span class="line line-top"></span>
                             <a class="nav-link" th:href="@{/logout}"><i class="fa fa-user"></i>退出登录</a>
                             <span class="line line-bottom"></span>
@@ -73,10 +71,10 @@
                 <h2 class="h5">The YiLing Studio</h2>
                 <div class="yl-intro"></div>
             </section>
-            <section class="sec-body centerpage" sec:authorize="!hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
+            <section class="sec-body centerpage login-btn">
                 <button class="btn btn-success" data-toggle="modal" data-target="#signInModal">使用翼灵 ID 登录内部系统</button>
             </section>
-            <section class="sec-body-for-login" sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')"></section>
+            <section class="sec-body-for-login"></section>
         </div>
         <div class="section openpage">
             <section class="sec-header secpage">
@@ -208,20 +206,7 @@
             <div class="yl-container text-center">
                 <h2 class="h2">加入我们</h2>
                 <h3 class="h5">Join us</h3>
-                <div class="yl-intro">
-                    <!-- <p>
-                        我们是一支以嵌入式开发特色，以云端、手机端、PC 端协作开发的团队。<br/>
-                        <span class="yl-translation">We are a team developing Embedded system specially, and collaborative with Cloud, Mobile and PC development.</span>
-                    </p>
-                    <p>
-                        如果你有改变世界的想法，如果你有脚踏实地的耐力，<br/>
-                        <span class="yl-translation">If you have the idea of changing the world, or have a down-to-earth endurance,</span>
-                    </p>
-                    <p>
-                        那么，你正是我们在找的人！<br/>
-                        <span class="yl-translation">we'll want you!</span>
-                    </p> -->
-                </div>
+                <div class="yl-intro"></div>
                 <div class="btn-group">
                     <button class="btn btn-success disabled"><span class="yl-time"></span> 届新生报名入口</button>
                     <a href="/joinus" target="_blank" class="btn btn-primary">其他报名入口</a>
@@ -233,37 +218,7 @@
             <div class="yl-container text-center">
                 <h2 class="h2">关于我们</h2>
                 <h3 class="h5">About us</h3>
-                <div class="yl-website">
-                    <!-- <a href="/" class="yl-website-link text-center">
-                        <img data-src="img/nav-official-48.png" alt="翼灵官网" class="website-item" />
-                        <span class="website-info">翼灵官网</span>
-                    </a>
-                    <a href="/direction" target="_blank" class="yl-website-link text-center">
-                        <img data-src="img/nav-major-48.png" alt="培养方向" class="website-item" />
-                        <span class="website-info">培养方向</span>
-                    </a>
-                    <a href="/match" target="_blank" class="yl-website-link text-center">
-                        <img data-src="img/nav-competition-48.png" alt="创意大赛" class="website-item" />
-                        <span class="website-info">创意大赛</span>
-                    </a>
-                    <a href="/glory" target="_blank" class="yl-website-link text-center">
-                        <img data-src="img/nav-open-48.png" alt="开源空间" class="website-item" />
-                        <span class="website-info">开源空间</span>
-                    </a>
-                    <a href="/joinus" target="_blank" class="yl-website-link text-center">
-                        <img data-src="img/nav-new-48.png" alt="招新系统" class="website-item" />
-                        <span class="website-info">招新系统</span>
-                    </a>
-                    <a href="javascript:void(0);" target="_blank" class="yl-website-link text-center">
-                        <img data-src="img/nav-exam-48.png" alt="考试系统" class="website-item" />
-                        <span class="website-info">考试系统</span>
-                    </a>
-                    <a href="/family" target="_blank" class="yl-website-link text-center">
-                        <img data-src="img/nav-family-48.png" alt="翼灵一家人" class="website-item" />
-                        <span class="website-info">翼灵一家人</span>
-                    </a> -->
-
-                </div>
+                <div class="yl-website"></div>
                 <div class="yl-location" id="allmap"></div>
             </div>
         </div>
