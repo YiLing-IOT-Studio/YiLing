@@ -317,7 +317,7 @@ $(document).ready(function() {
             }
             if (index === 3) {
                 $('.card-list').html(` <div class="card card-em">
-                    <img src="../static/img/sc-data-128.png" class="card-img-top" alt="embedded" />
+                    <img src=" /img/sc-data-128.png" class="card-img-top" alt="embedded" />
                     <section class="card-body">
                         <div class="card-title">嵌入式</div>
                         <div class="card-content">
@@ -327,7 +327,7 @@ $(document).ready(function() {
                     </section>
                 </div>
                 <div class="card card-bc">
-                    <img src="../static/img/cdp-data-128.png" class="card-img-top" alt="embedded" />
+                    <img src=" /img/cdp-data-128.png" class="card-img-top" alt="embedded" />
                     <section class="card-body">
                         <div class="card-title">Web 后端</div>
                         <div class="card-content">
@@ -337,7 +337,7 @@ $(document).ready(function() {
                     </section>
                 </div>
                 <div class="card card-an">
-                    <img src="../static/img/android-128.png" class="card-img-top" alt="embedded" />
+                    <img src=" /img/android-128.png" class="card-img-top" alt="embedded" />
                     <section class="card-body">
                         <div class="card-title">Android</div>
                         <div class="card-content">
@@ -347,7 +347,7 @@ $(document).ready(function() {
                     </section>
                 </div>
                 <div class="card card-fe">
-                    <img src="../static/img/code-fe-128.png" class="card-img-top" alt="embedded" />
+                    <img src=" /img/code-fe-128.png" class="card-img-top" alt="embedded" />
                     <section class="card-body">
                         <div class="card-title">Web 前端</div>
                         <div class="card-content">
@@ -360,7 +360,7 @@ $(document).ready(function() {
             if (index === 4) {
                 $('.members').html(`<div class="single-member effect-1">
                     <div class="member-image">
-                        <img src="../static/img/famous/famous-liguodong-200x200.jpg" alt="liguodong" />
+                        <img src=" /img/famous/famous-liguodong-200x200.jpg" alt="liguodong" />
                     </div>
                     <div class="member-info">
                         <h3>李国冬</h3>
@@ -380,7 +380,7 @@ $(document).ready(function() {
                 </div>
                 <div class="single-member effect-1">
                     <div class="member-image">
-                        <img src="../static/img/famous/famous-chengmiaohong-200x200.jpg" alt="chengmiaohong" />
+                        <img src=" /img/famous/famous-chengmiaohong-200x200.jpg" alt="chengmiaohong" />
                     </div>
                     <div class="member-info">
                         <h3>陈庙红</h3>
@@ -400,7 +400,7 @@ $(document).ready(function() {
                 </div>
                 <div class="single-member effect-1">
                     <div class="member-image">
-                        <img src="../static/img/famous/famous-wuhaojie-200x200.jpg" alt="wuhaojie" />
+                        <img src=" /img/famous/famous-wuhaojie-200x200.jpg" alt="wuhaojie" />
                     </div>
                     <div class="member-info">
                         <h3>吴豪杰</h3>
@@ -433,19 +433,19 @@ $(document).ready(function() {
                         
                         <span class="website-info">翼灵官网</span>
                     </a>
-                    <a href="/direction" target="_blank" class="yl-website-link text-center">
+                    <a href="/direction" class="yl-website-link text-center">
                         
                         <span class="website-info">培养方向</span>
                     </a>
-                    <a href="/match" target="_blank" class="yl-website-link text-center">
+                    <a href="/match" class="yl-website-link text-center">
                         
                         <span class="website-info">创意大赛</span>
                     </a>
-                    <a href="/glory" target="_blank" class="yl-website-link text-center">
+                    <a href="/glory" class="yl-website-link text-center">
                         
                         <span class="website-info">开源空间</span>
                     </a>
-                    <a href="/joinus" target="_blank" class="yl-website-link text-center">
+                    <a href="/joinus" class="yl-website-link text-center">
                         
                         <span class="website-info">招新网站</span>
                     </a>
@@ -453,7 +453,7 @@ $(document).ready(function() {
                         
                         <span class="website-info">考试系统</span>
                     </a>
-                    <a href="/family" target="_blank" class="yl-website-link text-center">
+                    <a href="/family" class="yl-website-link text-center">
                         
                         <span class="website-info">翼灵一家人</span>
                     </a>

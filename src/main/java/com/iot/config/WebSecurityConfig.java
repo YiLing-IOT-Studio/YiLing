@@ -27,12 +27,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(customUserService());
     }
 
-    //@Override
-    //public void configure(WebSecurity web) throws Exception {
-    //    web.ignoring().antMatchers("/js/**", "/img/**", "/css/**", "/fonts/**","/css1/**");
-    //    web.ignoring().antMatchers("/**");
-    //}
-
     @Bean
     public SpringTemplateEngine templateEngine(TemplateResolver templateResolver) {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
@@ -44,14 +38,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests()
+        //http.headers().frameOptions().disable();
+
+        http
+                //.exceptionHandling().authenticationEntryPoint(new UnauthorizedEntryPoint())
+                //.and()
+                .authorizeRequests()
+
                 .antMatchers("/manager").authenticated()
                 .and().formLogin().loginPage("/login").defaultSuccessUrl("/index",true).failureUrl("/fail").permitAll()
                 .and().sessionManagement().invalidSessionUrl("/")
                 .and().logout().deleteCookies("JSESSIONID")
-                //.and().rememberMe().key("remember-me").rememberMeParameter("remember-me").tokenValiditySeconds(1209600)
-                .and().logout().logoutSuccessUrl("/").permitAll();
+                .and().rememberMe().key("remember-me").rememberMeParameter("remember-me").tokenValiditySeconds(1209600)
+                .and().logout().logoutSuccessUrl("/").permitAll()
+                .and().csrf().disable();
 
-        http.csrf().disable();
+                //.antMatchers("/manager").authenticated()
+                //.and().formLogin()
+                //.loginPage("/index")
+                //.loginProcessingUrl("/login1")
+                //.usernameParameter("username").passwordParameter("password")
+                //.successHandler(new AjaxAuthSuccessHandler())
+                //.failureHandler(new AjaxAuthFailHandler())
+                //.permitAll()
+                //.and().logout().permitAll().and().csrf().disable();
     }
 }

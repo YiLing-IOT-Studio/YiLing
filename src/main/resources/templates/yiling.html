@@ -9,12 +9,12 @@
     <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=LKoy5ZY7sOIRQ17nIQ8zIr5I9ZNmVnzX"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
     <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" /> -->
-    <link rel="stylesheet" type="text/css" href="../static/css/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                         </li>
                         <li class="nav-item nav-item-js" sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
                             <!--<a class="nav-link" href="#"><i class="fa fa-user"></i>账号名</a>-->
-                            <a class="nav-link" href="/manager"><i class="fa fa-user"></i><span id="span1" sec:authentication="name"></span></a>
+                            <a class="nav-link" href="/#signin"><i class="fa fa-user"></i><span id="span1" sec:authentication="name"></span></a>
                         </li>
                         <li class="nav-item" sec:authorize="!hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
                             <span class="line line-top"></span>
@@ -68,17 +68,15 @@
         </div>
         <!-- page one -->
         <div class="section">
-            <div class="index-for-login animated">
-                <section class="sec-header text-center">
-                    <h1 class="h2">翼灵物联工作室</h1>
-                    <h2 class="h5">The YiLing Studio</h2>
-                    <div class="yl-intro"></div>
-                </section>
-                <section class="sec-body centerpage" sec:authorize="!hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
-                    <button class="btn btn-success" data-toggle="modal" data-target="#signInModal">使用翼灵 ID 登录内部系统</button>
-                </section>
-                <section class="sec-body-for-login" sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')"></section>
-            </div>
+            <section class="sec-header text-center">
+                <h1 class="h2">翼灵物联工作室</h1>
+                <h2 class="h5">The YiLing Studio</h2>
+                <div class="yl-intro"></div>
+            </section>
+            <section class="sec-body centerpage" sec:authorize="!hasAnyAuthority('ROLE_ADMIN','ROLE_USER')">
+                <button class="btn btn-success" data-toggle="modal" data-target="#signInModal">使用翼灵 ID 登录内部系统</button>
+            </section>
+            <section class="sec-body-for-login" sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')"></section>
         </div>
         <div class="section openpage">
             <section class="sec-header secpage">
@@ -86,7 +84,7 @@
                 <h3 class="h5 text-center">翼 灵 物 联 工 作 室</h3>
             </section>
             <section class="sec-body">
-                <div class="tiles animated">
+                <div class="tiles">
                     <div class="tile-con tile-left">
                         <div class="tile-item tile-date">
                             <span class="date-week"></span>
@@ -97,13 +95,13 @@
                             <p>YiLing IOT Studio</p>
                         </div>
                         <div class="tile-item tile-item-js">
-                            <img src="../static/img/brand/brand_we_1_200x200.jpg" class="person-img" alt="brand_we" />
+                            <img src="img/brand/brand_we_1_200x200.jpg" class="person-img" alt="brand_we" />
                         </div>
                         <div class="tile-item tile-item-js">
-                            <img src="../static/img/brand/brand_want_2_200x200.jpg" class="person-img" alt="brand_want" />
+                            <img src="img/brand/brand_want_2_200x200.jpg" class="person-img" alt="brand_want" />
                         </div>
                         <div class="tile-item tile-item-js">
-                            <img src="../static/img/brand/brand_you_2_200x200.jpg" class="person-img" alt="brand_you" />
+                            <img src="img/brand/brand_you_2_200x200.jpg" class="person-img" alt="brand_you" />
                         </div>
                         <div class="tile-item tile-weather">
                             <div class="weather"></div>
@@ -123,39 +121,39 @@
                     </div>
                     <div class="tile-con tile-main">
                         <div class="tile-item swiper">
-                            <img src="../static/img/16_300x320.jpg" class="swiper-img img1" alt="16" />
-                            <img src="../static/img/android_300x320.jpg" class="swiper-img img2" alt="android" />
-                            <img src="../static/img/embedded_300x320.jpg" class="swiper-img img3" alt="embedded" />
-                            <img src="../static/img/backend_300x320.jpg" class="swiper-img img4" alt="backend" />
+                            <img src="img/16_300x320.jpg" class="swiper-img img1" alt="16" />
+                            <img src="img/android_300x320.jpg" class="swiper-img img2" alt="android" />
+                            <img src="img/embedded_300x320.jpg" class="swiper-img img3" alt="embedded" />
+                            <img src="img/backend_300x320.jpg" class="swiper-img img4" alt="backend" />
                         </div>
                     </div>
                     <div class="tile-con tile-right">
                         <div class="tile-item">
                             <span class="sticker">前端</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/frontend/fe_liyoubo_200x200.jpg" class="tile-img" alt="frontend" />
-                                <img src="../static/img/frontend/fe_liwenfei_200x200.jpg" class="tile-img" alt="frontend" />
+                                <img src="img/frontend/fe_liyoubo_200x200.jpg" class="tile-img" alt="frontend" />
+                                <img src="img/frontend/fe_liwenfei_200x200.jpg" class="tile-img" alt="frontend" />
                             </div>
                         </div>
                         <div class="tile-item">
                             <span class="sticker">后端</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/backend/be_xiongxiaoyu_200x200.jpg" alt="backend" />
-                                <img src="../static/img/backend/be_jinglili_200x200.jpg" alt="backend" />
+                                <img src="img/backend/be_xiongxiaoyu_200x200.jpg" alt="backend" />
+                                <img src="img/backend/be_jinglili_200x200.jpg" alt="backend" />
                             </div>
                         </div>
                         <div class="tile-item">
                             <span class="sticker">荣誉</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/glory/ji-suan-ji-she-ji-da-sai-yi-deng-jiang-200x200.jpg" alt="glory" />
-                                <img src="../static/img/glory/wu-lian-wang-she-ji-jing-sai-200x200.jpg" alt="glory" />
+                                <img src="img/glory/ji-suan-ji-she-ji-da-sai-yi-deng-jiang-200x200.jpg" alt="glory" />
+                                <img src="img/glory/wu-lian-wang-she-ji-jing-sai-200x200.jpg" alt="glory" />
                             </div>
                         </div>
                         <div class="tile-item">
                             <span class="sticker">嵌入式</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/embedded/em_yigangxi_200x200.jpg" alt="embedded" />
-                                <img src="../static/img/embedded/em-chengmiaohong-200x200.jpg" alt="embedded" />
+                                <img src="img/embedded/em_yigangxi_200x200.jpg" alt="embedded" />
+                                <img src="img/embedded/em-chengmiaohong-200x200.jpg" alt="embedded" />
                             </div>
                         </div>
                         <div class="tile-item tile-news col-item-2">
@@ -165,22 +163,22 @@
                         <div class="tile-item">
                             <span class="sticker">安卓</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/android/an_tangguangsheng_200x200.jpg" alt="android" />
-                                <img src="../static/img/android/an_zengxinrui_200x200.jpg" alt="android" />
+                                <img src="img/android/an_tangguangsheng_200x200.jpg" alt="android" />
+                                <img src="img/android/an_zengxinrui_200x200.jpg" alt="android" />
                             </div>
                         </div>
                         <div class="tile-item tile-join">
                             <span class="sticker">17 萌新</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/newMembers/new_fenglei_200x200.jpg" alt="newMembers" />
-                                <img src="../static/img/newMembers/new_xiaoyaqiong_200x200.jpg" alt="newMembers" />
+                                <img src="img/newMembers/new_fenglei_200x200.jpg" alt="newMembers" />
+                                <img src="img/newMembers/new_xiaoyaqiong_200x200.jpg" alt="newMembers" />
                             </div>
                         </div>
                         <div class="tile-item">
                             <span class="sticker">项目</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/project/xun-che-xi-tong-200x200.jpg" alt="project" />
-                                <img src="../static/img/project/zhi-neng-an-quan-xie-200x200.jpg" alt="project" />
+                                <img src="img/project/xun-che-xi-tong-200x200.jpg" alt="project" />
+                                <img src="img/project/zhi-neng-an-quan-xie-200x200.jpg" alt="project" />
                             </div>
                         </div>
                     </div>
@@ -207,10 +205,22 @@
             </section>
         </div>
         <div class="section">
-            <div class="yl-container text-center joinus-sec animated">
+            <div class="yl-container text-center">
                 <h2 class="h2">加入我们</h2>
                 <h3 class="h5">Join us</h3>
                 <div class="yl-intro">
+                    <!-- <p>
+                        我们是一支以嵌入式开发特色，以云端、手机端、PC 端协作开发的团队。<br/>
+                        <span class="yl-translation">We are a team developing Embedded system specially, and collaborative with Cloud, Mobile and PC development.</span>
+                    </p>
+                    <p>
+                        如果你有改变世界的想法，如果你有脚踏实地的耐力，<br/>
+                        <span class="yl-translation">If you have the idea of changing the world, or have a down-to-earth endurance,</span>
+                    </p>
+                    <p>
+                        那么，你正是我们在找的人！<br/>
+                        <span class="yl-translation">we'll want you!</span>
+                    </p> -->
                 </div>
                 <div class="btn-group">
                     <button class="btn btn-success disabled"><span class="yl-time"></span> 届新生报名入口</button>
@@ -223,7 +233,37 @@
             <div class="yl-container text-center">
                 <h2 class="h2">关于我们</h2>
                 <h3 class="h5">About us</h3>
-                <div class="yl-website"></div>
+                <div class="yl-website">
+                    <!-- <a href="/" class="yl-website-link text-center">
+                        <img data-src="img/nav-official-48.png" alt="翼灵官网" class="website-item" />
+                        <span class="website-info">翼灵官网</span>
+                    </a>
+                    <a href="/direction" target="_blank" class="yl-website-link text-center">
+                        <img data-src="img/nav-major-48.png" alt="培养方向" class="website-item" />
+                        <span class="website-info">培养方向</span>
+                    </a>
+                    <a href="/match" target="_blank" class="yl-website-link text-center">
+                        <img data-src="img/nav-competition-48.png" alt="创意大赛" class="website-item" />
+                        <span class="website-info">创意大赛</span>
+                    </a>
+                    <a href="/glory" target="_blank" class="yl-website-link text-center">
+                        <img data-src="img/nav-open-48.png" alt="开源空间" class="website-item" />
+                        <span class="website-info">开源空间</span>
+                    </a>
+                    <a href="/joinus" target="_blank" class="yl-website-link text-center">
+                        <img data-src="img/nav-new-48.png" alt="招新系统" class="website-item" />
+                        <span class="website-info">招新系统</span>
+                    </a>
+                    <a href="javascript:void(0);" target="_blank" class="yl-website-link text-center">
+                        <img data-src="img/nav-exam-48.png" alt="考试系统" class="website-item" />
+                        <span class="website-info">考试系统</span>
+                    </a>
+                    <a href="/family" target="_blank" class="yl-website-link text-center">
+                        <img data-src="img/nav-family-48.png" alt="翼灵一家人" class="website-item" />
+                        <span class="website-info">翼灵一家人</span>
+                    </a> -->
+
+                </div>
                 <div class="yl-location" id="allmap"></div>
             </div>
         </div>
@@ -247,7 +287,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <figure class="text-center">
-                        <img src="../static/img/logo.png" />
+                        <img src="img/logo.png" />
                         <figcaption class="h6">登 录 翼 灵</figcaption>
                     </figure>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -255,7 +295,7 @@
                             </button>
                 </div>
                 <div class="modal-body">
-                    <form id="signInForm" role="form" th:action="@{/login}" method="post">
+                    <form id="signInForm" role="form" action="/login" method="post">
                         <div class="form-group">
                             <label for="username" class="form-control-label">账号</label>
                             <input type="text" id="username" name="username" class="form-control" placeholder="请输入账号" autocomplete="off" />
@@ -273,18 +313,18 @@
         </div>
     </div>
 
-    <script src=" ../static/js/iconfont.js"></script>
-    <script src=" ../static/js/jquery-3.2.1.min.js"></script>
-    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <script src=" ../static/js/jquery.easings.min.js"></script>
+    <script src="js/iconfont.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- This following line is optional. Only necessary if you use the optioncss3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+    <script src="js/jquery.easings.min.js"></script>
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-    <script src=" ../static/js/scrolloverflow.min.js"></script>
-    <script src=" ../static/js/jquery.fullPage.min.js"></script>
-    <script src=" ../static/js/bootstrap.min.js"></script>
-    <script src=" ../static/js/move.min.js"></script>
-    <script src=" ../static/js/funLib.js"></script>
-    <script src=" ../static/js/tile.js"></script>
-    <script src=" ../static/js/main.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/move.min.js"></script>
+    <script src="js/funLib.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
