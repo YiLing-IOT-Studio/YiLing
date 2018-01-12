@@ -605,61 +605,6 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     (function() {
-        // $('#username').blur(function() {
-        //     var username = $('#username').val();
-        //     if (username) {
-        //         $.ajax({
-        //             type: 'POST',
-        //             url: '/',
-        //             dataType: 'json',
-        //             data: {
-        //                 'username': username
-        //             },
-        //             success: function(data) {
-        //                 console.log(data);
-        //                 if (parseInt(data)) {
-        //                     $('.form-group:first-child').addClass('has-success');
-        //                     $('#username').addClass('form-control-success');
-        //                 } else {
-        //                     $('.form-group:first-child').addClass('has-error');
-        //                     $('#username').addClass('form-control-error');
-        //                 }
-        //             },
-        //             error: function(error) {
-        //                 console.log(error);
-        //             }
-        //         });
-        //     }
-        // });
-        // $('#username').focus(function() {
-        //     if ($(this).hasClass('form-control-success')) {
-        //         $(this).removeClass('form-control-success');
-        //         $(this).parent().remove('has-success');
-        //     } else {
-        //         $(this).removeClass('form-control-error');
-        //         $(this).parent().remove('has-error');
-        //     }
-        // });
-        // $('#password').blur(function() {
-        //     var password = $('#password').val();
-        //     var username = $('#username').val();
-        //     if (password.length >= 6 && password.length <= 16) {
-        //         $('.form-group:nth-child(2)').addClass('has-success');
-        //         $('#password').addClass('form-control-success');
-        //     } else {
-        //         $('.form-group:nth-child(2)').addClass('has-warning');
-        //         $('#password').addClass('form-control-warning');
-        //     }
-        // });
-        // $('#password').focus(function() {
-        //     if ($(this).hasClass('form-control-success')) {
-        //         $(this).removeClass('form-control-success');
-        //         $(this).parent().remove('has-success');
-        //     } else {
-        //         $(this).removeClass('form-control-warning');
-        //         $(this).parent().remove('has-warning');
-        //     }
-        // });
         $('#inSubmitButton').click(function(event) {
             event.preventDefault();
             $.ajax({
@@ -670,14 +615,11 @@ $(document).ready(function() {
                     'username': $('#username').val(),
                     'password': $('#password').val()
                 },
-                // success: function() {
-                //     console.log('login success');
-                // },
-                // error: function() {
-                //     console.log('login error');
-                // }
-                success: function (data) {
-                    console.log('login success', data.status);
+                success: function(data) {
+                    console.log('login success');
+                    if (data.status === 1) {
+                        $('#signInModal').modal('hide');
+                    }
                 },
                 error: function() {
                     console.log('login error');
