@@ -50,6 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
                 .and().exceptionHandling().authenticationEntryPoint(new UnauthorizedEntryPoint())
                 .and().authorizeRequests()
+                .antMatchers("/setDate").authenticated()
                 .and().formLogin()
                 .loginPage("/index")
                 .loginProcessingUrl("/login")

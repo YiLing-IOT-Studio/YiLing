@@ -78,4 +78,9 @@ public class IndexController {
     public String password() {
         return "pwd";
     }
+
+    @RequestMapping("/setDate")
+    public String setDate() {
+        return "date";
+    }
 }

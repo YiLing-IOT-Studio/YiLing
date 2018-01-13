@@ -1,6 +1,8 @@
 package com.iot.officalsite.controller;
 
+import com.iot.officalsite.repository.DateRepository;
 import com.iot.officalsite.utils.TimeUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,12 +13,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MatchController {
 
+    @Autowired
+    private DateRepository dateRepository;
+
     @RequestMapping("/match")
     public ModelAndView competition() {
 
         TimeUtil timeUtil = new TimeUtil();
         ModelAndView mav = new ModelAndView();
-        String date = "2018-11-01";
+        Integer id = 1;
+        String date = dateRepository.findMatchDate(id);
         if (timeUtil.time(date) == -1) {
             String info = "未到报名日期 ！";
             mav.setViewName("message");
