@@ -46,12 +46,6 @@ public interface BuqianRepo extends JpaRepository<Buqian, Long> {
     @Query("update Buqian b set b.status=2 where b.id=?1")
     int setBuqianFailed(Long id);
 
-    /*
-    已通过审核，查找!!!
-     *//*
-    @Query("select b from Buqian b where b.createTime>?1 and b.createTime<?2 and b.name=?3 and b.status=1")
-    List<Buqian> findByStatusIdEq1(Timestamp starttime, Timestamp endtime, String name);*/
-
     //根据名字查找有效补签时间
     @Query("select b.date from Buqian b where b.createTime>?1 and b.createTime<?2 and b.name=?3 and b.status=1")
     List<String> findByNameStatus(Timestamp starttime, Timestamp endtime, String name);

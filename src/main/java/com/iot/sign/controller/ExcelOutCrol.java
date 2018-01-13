@@ -79,9 +79,6 @@ public class ExcelOutCrol {
             recordsDto.setName(name);
             Long time = signRecordsRepo.queryByNameTime(name, new Timestamp(start), new Timestamp(end));
             System.out.println(time);
-            /*Integer buqian = buqianRepo.findAllBuqian(new Timestamp(start), new Timestamp(end),name);
-            System.out.println(buqian);
-            recordsDto.setBuqian(buqian);*/
             List<String> buqians_time = buqianRepo.findByNameStatus(new Timestamp(start), new Timestamp(end),name);
             if(buqians_time != null){
                 for(String buqian_time : buqians_time){
@@ -104,9 +101,6 @@ public class ExcelOutCrol {
                         recordsDto.setName(string);
                         Long time = signRecordsRepo.queryByNameTime(string, new Timestamp(start), new Timestamp(end));
                         System.out.println(time);
-                        /*Integer buqian = buqianRepo.findAllBuqian(new Timestamp(start), new Timestamp(end),name);
-                        System.out.println(buqian);
-                        recordsDto.setBuqian(buqian);*/
                         List<String> buqians_time = buqianRepo.findByNameStatus(new Timestamp(start), new Timestamp(end),string);
                         if(buqians_time != null){
                             for(String buqian_time : buqians_time){
@@ -130,9 +124,6 @@ public class ExcelOutCrol {
                             RecordsDto recordsDto = new RecordsDto();
                             recordsDto.setName(string);
                             Long time = signRecordsRepo.queryByNameTime(string, new Timestamp(start), new Timestamp(end));
-                            /*Integer buqian = buqianRepo.findAllBuqian(new Timestamp(start), new Timestamp(end),name);
-                            System.out.println(buqian);
-                            recordsDto.setBuqian(buqian);*/
                             List<String> buqians_time = buqianRepo.findByNameStatus(new Timestamp(start), new Timestamp(end),string);
                             if(buqians_time != null){
                                 for(String buqian_time : buqians_time){
@@ -155,9 +146,6 @@ public class ExcelOutCrol {
                             RecordsDto recordsDto = new RecordsDto();
                             recordsDto.setName(string);
                             Long time = signRecordsRepo.queryByNameTime(string, new Timestamp(start), new Timestamp(end));
-                            /*Integer buqian = buqianRepo.findAllBuqian(new Timestamp(start), new Timestamp(end),name);
-                            System.out.println(buqian);
-                            recordsDto.setBuqian(buqian);*/
                             List<String> buqians_time = buqianRepo.findByNameStatus(new Timestamp(start), new Timestamp(end),string);
                             if(buqians_time != null){
                                 for(String buqian_time : buqians_time){

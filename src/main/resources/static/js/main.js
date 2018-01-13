@@ -629,7 +629,7 @@ $(document).ready(function() {
             storage.setItem('username', userObj.username);
             $.ajax({
                 type: 'post',
-                url: '/login1',
+                url: '/login',
                 dataType: 'json',
                 data: {
                     'username': $('#username').val(),

@@ -17,7 +17,7 @@
         <li role="presentation"><a th:href="@{/signDetail}">签到信息查询</a></li>
         <li role="presentation"><a th:href="@{/buqian/showReviewPage}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">补签审核</a></li>
         <li role="presentation"><a th:href="@{/excelout}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">签到信息导出</a></li>
-        <li role="presentation"><a th:href="@{/sign}" sec:authorize="hasAnyAuthority('SIGN')">签到页</a></li>
+        <li role="presentation"><a th:href="@{/sign}">签到页</a></li>
         <li role="presentation"><a th:href="@{/signDetail}">返回</a></li>
     </ul>
 </nav>
