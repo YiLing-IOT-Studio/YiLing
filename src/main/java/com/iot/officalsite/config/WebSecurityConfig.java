@@ -50,7 +50,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
                 .and().exceptionHandling().authenticationEntryPoint(new UnauthorizedEntryPoint())
                 .and().authorizeRequests()
-                .antMatchers("/setDate").authenticated()
+                .antMatchers("/setDate").hasAuthority("ROLE_ADMIN")
+                .antMatchers("/sign").hasAuthority("ROLE_TIMER")
                 .and().formLogin()
                 .loginPage("/index")
                 .loginProcessingUrl("/login")
@@ -58,6 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .successHandler(new AjaxAuthSuccessHandler())
                 .failureHandler(new AjaxAuthFailHandler())
                 .permitAll()
+                .and().rememberMe().key("remember-me").rememberMeParameter("remember-me").tokenValiditySeconds(1209600)
                 .and().logout().logoutSuccessUrl("/").permitAll()
                 .and().csrf().disable();
     }

@@ -51,15 +51,12 @@ public class SignDetailCrol {
         String starts = map.get("starts");
         String ends = map.get("ends");
         String name = getCurrentUsername();
-        System.out.println(name);
         long start = new SimpleDateFormat("yyyy-MM-dd").parse(starts).getTime();
         long end = new SimpleDateFormat("yyyy-MM-dd").parse(ends).getTime();
 
         List<SignRecords> signRecordses = signRecordsRepo.queryByNameTimeDetail(name,new Timestamp(start), new Timestamp(end));
-        System.out.println(signRecordses.size());
         //!!!
         List<Buqian> buqians = buqianRepo.queryByNameTime(new Timestamp(start), new Timestamp(end),name);
-        System.out.println(buqians.size());
         Integer i = 0;
         if(buqians.size() != 0 && buqians != null){
             while(i < buqians.size()){
@@ -75,7 +72,6 @@ public class SignDetailCrol {
             }
         }
 
-        System.out.println(signRecordses.size());
         if (signRecordses.size() != 0 && signRecordses != null) {
             //!!!
             long totalMill = 0;

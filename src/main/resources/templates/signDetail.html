@@ -18,11 +18,10 @@
     <ul class="nav nav-pills col-lg-12" role="tablist">
         <p class="navbar-text col-lg-5">Welcome: <span id="span1" sec:authentication="name"></span></p>
         <li role="presentation"><a th:href="@{/signDetail}">签到信息查询</a></li>
-        <li role="presentation"><a th:href="@{/buqian/showReviewPage}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">补签审核</a></li>
-        <li role="presentation"><a th:href="@{/excelout}" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">签到信息导出</a></li>
-        <li role="presentation"><a th:href="@{/sign}">签到页</a></li>
+        <li role="presentation"><a th:href="@{/buqian/showReviewPage}" sec:authorize="hasAnyAuthority('ROLE_TIMER')">补签审核</a></li>
+        <li role="presentation"><a th:href="@{/excelout}" sec:authorize="hasAnyAuthority('ROLE_TIMER')">签到信息导出</a></li>
         <li role="presentation"><a th:href="@{/setPassword}">修改密码</a></li>
-        <li role="presentation"><a th:href="@{/index}">退出</a></li>
+        <li role="presentation"><a th:href="@{/}">退出</a></li>
     </ul>
 </nav>
 

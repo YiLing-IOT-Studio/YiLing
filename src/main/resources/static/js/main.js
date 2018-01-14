@@ -160,7 +160,7 @@ $(document).ready(function() {
                     }
                     var timer = null;
                     timer = setTimeout(anim, 1000);
-                });
+                })();
 
                 (function() {
                     var timer = null;
@@ -216,16 +216,52 @@ $(document).ready(function() {
                     }
 
                     function doSetTimeout(num) {
-                        rotateAnim(num);
+                        // console.log(num);
+                        var tileItem = tileItems[num];
+                        //console.log(tileItem);
+                        var tileItemCon = tileItem.getElementsByClassName('tile-item-content')[0];
+                        //console.log(tileItemCon);
+                        var tileImg = tileItemCon.getElementsByTagName('img');
+                        //console.log(tileImg);
+
+                        function rotate3d() {
+                            tileItemCon.style.transform = 'rotateX(90deg)';
+                        }
+
+                        function rotate3dReverse() {
+                            tileItemCon.style.transform = 'rotateX(0deg)';
+                        }
+                        if (tileItem.flag) {
+                            if (tileItem.imgFlag1) {
+                                tileImg[1].src = tileItem.imgs[1][0];
+                                tileItem.imgFlag1 = false;
+                            } else {
+                                tileImg[1].src = tileItem.imgs[1][1];
+                                tileItem.imgFlag1 = true;
+                            }
+                            rotate3d();
+                            tileItem.flag = false;
+                        } else {
+                            if (tileItem.imgFlag2) {
+                                tileImg[0].src = tileItem.imgs[0][0];
+                                tileItem.imgFlag2 = false;
+                            } else {
+                                tileImg[0].src = tileItem.imgs[0][1];
+                                tileItem.imgFlag2 = true;
+                            }
+                            rotate3dReverse();
+                            tileItem.flag = true;
+                        }
+
                         randomAnimCount++;
                         if (randomAnimCount < Infinity) {
-                            setTimeout(doSetTimeout, 5000);
+                            setTimeout(randomAnimation, 5000);
                         } else {
                             location.reload();
                         }
                     }
 
-                    timer = setTimeout(doSetTimeout, 5000);
+                    timer = setTimeout(randomAnimation, 5000);
 
                     for (var i = 0; i < tileItemsLen; i++) {
                         (function(i) {
@@ -268,45 +304,7 @@ $(document).ready(function() {
                     tileItems[7].imgs = [
                         [' img/project/xun-che-xi-tong-200x200.jpg', ' img/project/zhi-neng-an-quan-xie-200x200.jpg'],
                         [' img/project/wei-xin-xiao-cheng-xu-200x200.jpg', ' img/project/zhi-neng-xiao-che-200x200.jpg']
-                    ]
-
-                    function rotateAnim(index) {
-                        var tileItem = tileItems[index];
-                        //console.log(tileItem);
-                        var tileItemCon = tileItem.getElementsByClassName('tile-item-content')[0];
-                        //console.log(tileItemCon);
-                        var tileImg = tileItemCon.getElementsByTagName('img');
-                        //console.log(tileImg);
-
-                        function rotate3d() {
-                            tileItemCon.style.transform = 'rotateX(90deg)';
-                        }
-
-                        function rotate3dReverse() {
-                            tileItemCon.style.transform = 'rotateX(0deg)';
-                        }
-                        if (tileItem.flag) {
-                            if (tileItem.imgFlag1) {
-                                tileImg[1].src = tileItem.imgs[1][0];
-                                tileItem.imgFlag1 = false;
-                            } else {
-                                tileImg[1].src = tileItem.imgs[1][1];
-                                tileItem.imgFlag1 = true;
-                            }
-                            rotate3d();
-                            tileItem.flag = false;
-                        } else {
-                            if (tileItem.imgFlag2) {
-                                tileImg[0].src = tileItem.imgs[0][0];
-                                tileItem.imgFlag2 = false;
-                            } else {
-                                tileImg[0].src = tileItem.imgs[0][1];
-                                tileItem.imgFlag2 = true;
-                            }
-                            rotate3dReverse();
-                            tileItem.flag = true;
-                        }
-                    }
+                    ];
                 })();
                 (function() {
                     var tileItems = document.getElementsByClassName('tile-item-js');
@@ -354,7 +352,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             C <br/> 智能硬件 <br/> 物联网
                         </div>
-                        <a href="/flush" class="btn btn-learn-more btn-sm">学习嵌入式</a>
+                        <a href="/direction/flush" class="btn btn-learn-more btn-sm">学习嵌入式</a>
                     </section>
                 </div>
                 <div class="card card-bc">
@@ -364,7 +362,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             Java <br/> 云服务 <br/> 数据库
                         </div>
-                        <a href="/end" class="btn btn-learn-more btn-sm">学习 Web 后端</a>
+                        <a href="/direction/end" class="btn btn-learn-more btn-sm">学习 Web 后端</a>
                     </section>
                 </div>
                 <div class="card card-an">
@@ -374,7 +372,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             Java <br/> 移动终端 <br/> PWA
                         </div>
-                        <a href="/android" class="btn btn-learn-more btn-sm">学习 Android</a>
+                        <a href="/direction/android" class="btn btn-learn-more btn-sm">学习 Android</a>
                     </section>
                 </div>
                 <div class="card card-fe">
@@ -384,7 +382,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             HTML、CSS、JavaScript、ES6 <br/> Vue.js、webpack <br/> Node.js、Express、MongoDB <br/>
                         </div>
-                        <a href="/fronted" class="btn btn-learn-more btn-sm">学习 Web 前端</a>
+                        <a href="/direction/fronted" class="btn btn-learn-more btn-sm">学习 Web 前端</a>
                     </section>
                 </div>`).addClass('animated');
             }

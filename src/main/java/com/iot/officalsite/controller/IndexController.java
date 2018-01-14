@@ -49,31 +49,6 @@ public class IndexController {
         return "aboutUs";
     }
 
-    @RequestMapping("/direction")
-    public String direction() {
-        return "main";
-    }
-
-    @RequestMapping("/android")
-    public String android() {
-        return "android";
-    }
-
-    @RequestMapping("/flush")
-    public String flush() {
-        return "flushbonading";
-    }
-
-    @RequestMapping("/end")
-    public String back() {
-        return "webBack";
-    }
-
-    @RequestMapping("/fronted")
-    public String fronted() {
-        return "webFronted";
-    }
-
     @RequestMapping("/setPassword")
     public String password() {
         return "pwd";
