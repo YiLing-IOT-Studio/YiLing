@@ -138,7 +138,13 @@ $(document).ready(function() {
                                                                             .set('top', '0px')
                                                                             .duration('2s')
                                                                             .delay('2s')
-                                                                            .end();
+                                                                            .end(function() {
+                                                                                move('.swiper-img.img1')
+                                                                                    .set('top', '318px')
+                                                                                    .duration('2s')
+                                                                                    .delay('2s')
+                                                                                    .end();
+                                                                            });
                                                                     })
                                                             })
                                                     })
