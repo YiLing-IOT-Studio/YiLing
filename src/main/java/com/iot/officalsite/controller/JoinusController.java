@@ -23,13 +23,13 @@ public class JoinusController {
         Integer id = 1;
         String date = dateRepository.findJoinDate(id);
         if (timeUtil.time(date) == -1) {
-            String info = "招新日期为每年九月 ！";
+            String info = "翼灵物联网工作室招新日期为每年九月 ！";
             mav.setViewName("message");
             mav.addObject("error", info);
-
             return mav;
         } else if (timeUtil.time(date) == 2) {
-            mav.setViewName("failed");
+            mav.addObject("error","很抱歉，出现了未知错误");
+            mav.setViewName("message");
             return mav;
         } else {
             mav.setViewName("joinus");

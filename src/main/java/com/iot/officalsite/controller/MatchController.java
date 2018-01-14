@@ -24,13 +24,13 @@ public class MatchController {
         Integer id = 1;
         String date = dateRepository.findMatchDate(id);
         if (timeUtil.time(date) == -1) {
-            String info = "未到报名日期 ！";
+            String info = "未到物联网创意大赛报名日期 ！";
             mav.setViewName("message");
             mav.addObject("error", info);
-
             return mav;
         } else if (timeUtil.time(date) == 2) {
-            mav.setViewName("failed");
+            mav.addObject("error","很抱歉，出现了未知错误");
+            mav.setViewName("message");
             return mav;
         } else {
             mav.setViewName("match");
