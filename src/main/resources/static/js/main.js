@@ -72,87 +72,89 @@ $(document).ready(function() {
             }
             if (index === 2) {
                 // setTimeout(function() { $('#pageloading').addClass('pageloaded') }, 0);
-                function anim() {
-                    move('.swiper-img.img1')
-                        .set('top', '0px')
-                        .duration('2s')
-                        .delay('2s')
-                        .end(function() {
-                            move('.swiper-img.img1')
-                                .set('top', '-318px')
-                                .duration('2s')
-                                .delay('2s')
-                                .end();
-                            move('.swiper-img.img2')
-                                .set('top', '0px')
-                                .duration('2s')
-                                .delay('2s')
-                                .end(function() {
-                                    move('.swiper-img.img2')
-                                        .set('top', '-318px')
-                                        .duration('2s')
-                                        .delay('2s')
-                                        .end();
-                                    move('.swiper-img.img3')
-                                        .set('top', '0px')
-                                        .duration('2s')
-                                        .delay('2s')
-                                        .end(function() {
-                                            move('.swiper-img.img3')
-                                                .set('top', '-318px')
-                                                .duration('2s')
-                                                .delay('2s')
-                                                .end();
-                                            move('.swiper-img.img4')
-                                                .set('top', '0px')
-                                                .duration('2s')
-                                                .delay('2s')
-                                                .end(function() {
-                                                    move('.swiper-img.img4')
-                                                        .set('top', '318px')
-                                                        .duration('2s')
-                                                        .delay('2s')
-                                                        .end();
-                                                    move('.swiper-img.img3')
-                                                        .set('top', '0px')
-                                                        .duration('2s')
-                                                        .delay('2s')
-                                                        .end(function() {
-                                                            move('.swiper-img.img3')
-                                                                .set('top', '318px')
-                                                                .duration('2s')
-                                                                .delay('2s')
-                                                                .end();
-                                                            move('.swiper-img.img2')
-                                                                .set('top', '0px')
-                                                                .duration('2s')
-                                                                .delay('2s')
-                                                                .end(function() {
-                                                                    move('.swiper-img.img2')
-                                                                        .set('top', '318px')
-                                                                        .duration('2s')
-                                                                        .delay('2s')
-                                                                        .end();
-                                                                    move('.swiper-img.img1')
-                                                                        .set('top', '0px')
-                                                                        .duration('2s')
-                                                                        .delay('2s')
-                                                                        .end();
-                                                                })
-                                                        })
-                                                })
-                                        })
-                                });
-                        });
-                    moveCount++;
-                    if (moveCount < Infinity) {
-                        setTimeout(anim, 60000);
-                    } else {
-                        location.reload();
+                (function() {
+                    function anim() {
+                        move('.swiper-img.img1')
+                            .set('top', '0px')
+                            .duration('2s')
+                            .delay('2s')
+                            .end(function() {
+                                move('.swiper-img.img1')
+                                    .set('top', '-318px')
+                                    .duration('2s')
+                                    .delay('2s')
+                                    .end();
+                                move('.swiper-img.img2')
+                                    .set('top', '0px')
+                                    .duration('2s')
+                                    .delay('2s')
+                                    .end(function() {
+                                        move('.swiper-img.img2')
+                                            .set('top', '-318px')
+                                            .duration('2s')
+                                            .delay('2s')
+                                            .end();
+                                        move('.swiper-img.img3')
+                                            .set('top', '0px')
+                                            .duration('2s')
+                                            .delay('2s')
+                                            .end(function() {
+                                                move('.swiper-img.img3')
+                                                    .set('top', '-318px')
+                                                    .duration('2s')
+                                                    .delay('2s')
+                                                    .end();
+                                                move('.swiper-img.img4')
+                                                    .set('top', '0px')
+                                                    .duration('2s')
+                                                    .delay('2s')
+                                                    .end(function() {
+                                                        move('.swiper-img.img4')
+                                                            .set('top', '318px')
+                                                            .duration('2s')
+                                                            .delay('2s')
+                                                            .end();
+                                                        move('.swiper-img.img3')
+                                                            .set('top', '0px')
+                                                            .duration('2s')
+                                                            .delay('2s')
+                                                            .end(function() {
+                                                                move('.swiper-img.img3')
+                                                                    .set('top', '318px')
+                                                                    .duration('2s')
+                                                                    .delay('2s')
+                                                                    .end();
+                                                                move('.swiper-img.img2')
+                                                                    .set('top', '0px')
+                                                                    .duration('2s')
+                                                                    .delay('2s')
+                                                                    .end(function() {
+                                                                        move('.swiper-img.img2')
+                                                                            .set('top', '318px')
+                                                                            .duration('2s')
+                                                                            .delay('2s')
+                                                                            .end();
+                                                                        move('.swiper-img.img1')
+                                                                            .set('top', '0px')
+                                                                            .duration('2s')
+                                                                            .delay('2s')
+                                                                            .end();
+                                                                    })
+                                                            })
+                                                    })
+                                            })
+                                    });
+                            });
+                        moveCount++;
+                        if (moveCount < Infinity) {
+                            setTimeout(anim, 60000);
+                        } else {
+                            location.reload();
+                        }
                     }
-                }
-                var timer = null;
-                timer = setTimeout(anim, 1000);
+                    var timer = null;
+                    timer = setTimeout(anim, 1000);
+                });
 
                 (function() {
                     var timer = null;
@@ -205,20 +207,19 @@ $(document).ready(function() {
                                 doSetTimeout(randomNum);
                                 break;
                         }
-
                     }
 
                     function doSetTimeout(num) {
                         rotateAnim(num);
                         randomAnimCount++;
                         if (randomAnimCount < Infinity) {
-                            setTimeout(randomAnimCount, 5000);
+                            setTimeout(doSetTimeout, 5000);
                         } else {
                             location.reload();
                         }
                     }
 
-                    timer = setTimeout(randomAnimation, 5000);
+                    timer = setTimeout(doSetTimeout, 5000);
 
                     for (var i = 0; i < tileItemsLen; i++) {
                         (function(i) {
@@ -300,44 +301,43 @@ $(document).ready(function() {
                             tileItem.flag = true;
                         }
                     }
+                })();
+                (function() {
+                    var tileItems = document.getElementsByClassName('tile-item-js');
+                    var tileItemsLen = tileItems.length;
+                    var tileImgs = [];
 
-                    (function() {
-                        var tileItems = document.getElementsByClassName('tile-item-js');
-                        var tileItemsLen = tileItems.length;
-                        var tileImgs = [];
+                    var timer = null;
 
-                        var timer = null;
+                    for (var i = 0; i < tileItemsLen; i++) {
+                        (function(i) {
+                            tileImgs[i] = tileItems[i].getElementsByClassName('person-img')[0];
+                        })(i);
+                    }
 
-                        for (var i = 0; i < tileItemsLen; i++) {
-                            (function(i) {
-                                tileImgs[i] = tileItems[i].getElementsByClassName('person-img')[0];
-                            })(i);
+                    var count = 0;
+
+                    var leftImgArr = [' img/brand/brand_we_1_200x200.jpg', ' img/brand/brand_we_2_200x200.jpg', ' img/brand/brand_we_2_200x200.jpg'];
+                    var centerImgArr = [' img/brand/brand_want_2_200x200.jpg', ' img/brand/brand_want_1_200x200.jpg', ' img/brand/brand_want_3_200x200.jpg'];
+                    var rightImgArr = [' img/brand/brand_you_2_200x200.jpg', ' img/brand/brand_you_2_200x200.jpg', ' img/brand/brand_you_1_200x200.jpg'];
+
+                    function autoAnim() {
+                        if (count >= 3) {
+                            count = 0;
                         }
-
-                        var count = 0;
-
-                        var leftImgArr = [' img/brand/brand_we_1_200x200.jpg', ' img/brand/brand_we_2_200x200.jpg', ' img/brand/brand_we_2_200x200.jpg'];
-                        var centerImgArr = [' img/brand/brand_want_2_200x200.jpg', ' img/brand/brand_want_1_200x200.jpg', ' img/brand/brand_want_3_200x200.jpg'];
-                        var rightImgArr = [' img/brand/brand_you_2_200x200.jpg', ' img/brand/brand_you_2_200x200.jpg', ' img/brand/brand_you_1_200x200.jpg'];
-
-                        function autoAnim() {
-                            if (count >= 3) {
-                                count = 0;
-                            }
-                            tileImgs[0].src = leftImgArr[count];
-                            tileImgs[1].src = centerImgArr[count];
-                            tileImgs[2].src = rightImgArr[count];
-                            count++;
-                            wwuCount++;
-                            if (wwuCount < Infinity) {
-                                timer = setTimeout(autoAnim, 3000);
-                            } else {
-                                location.reload();
-                            }
+                        tileImgs[0].src = leftImgArr[count];
+                        tileImgs[1].src = centerImgArr[count];
+                        tileImgs[2].src = rightImgArr[count];
+                        count++;
+                        wwuCount++;
+                        if (wwuCount < Infinity) {
+                            timer = setTimeout(autoAnim, 3000);
+                        } else {
+                            location.reload();
                         }
+                    }
 
-                        timer = setTimeout(autoAnim, 3000);
-                    })();
+                    timer = setTimeout(autoAnim, 3000);
                 })();
             }
             if (index === 3) {
