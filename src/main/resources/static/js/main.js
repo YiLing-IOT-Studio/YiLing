@@ -59,6 +59,9 @@ $(document).ready(function() {
 
         //events
         afterLoad: function(anchorLink, index) {
+            var moveCount = 0;
+            var randomAnimCount = 0;
+            var wwuCount = 0;
             if (index === 1) {
                 $('.yl-intro').html(`<div><span class="lead">翼灵物联工作室</span> - 一支追求技术、开发与自由的大学生团队。</div>
                 <div class="yl-translation">YiLing-ers pursue technology, openness and freedom.</div>`);
@@ -141,9 +144,15 @@ $(document).ready(function() {
                                         })
                                 });
                         });
+                    moveCount++;
+                    if (moveCount < Infinity) {
+                        setTimeout(anim, 60000);
+                    } else {
+                        location.reload();
+                    }
                 }
                 var timer = null;
-                timer = setInterval(anim(), 2000);
+                timer = setTimeout(anim, 1000);
 
                 (function() {
                     var timer = null;
@@ -161,19 +170,19 @@ $(document).ready(function() {
                         switch (randomNum) {
                             case 0:
                                 //console.log('item0');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             case 1:
                                 //console.log('item1');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             case 2:
                                 //console.log('item2');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             case 3:
                                 //console.log('item3');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             case 4:
                                 //console.log('item4');
@@ -181,25 +190,35 @@ $(document).ready(function() {
                                 break;
                             case 5:
                                 //console.log('item5');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             case 6:
                                 //console.log('item6');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             case 7:
                                 //console.log('item7');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                             default:
                                 //console.log('default animation');
-                                rotateAnim(randomNum);
+                                doSetTimeout(randomNum);
                                 break;
                         }
 
                     }
 
-                    timer = setInterval(randomAnimation, 5000);
+                    function doSetTimeout(num) {
+                        rotateAnim(num);
+                        randomAnimCount++;
+                        if (randomAnimCount < Infinity) {
+                            setTimeout(randomAnimCount, 5000);
+                        } else {
+                            location.reload();
+                        }
+                    }
+
+                    timer = setTimeout(randomAnimation, 5000);
 
                     for (var i = 0; i < tileItemsLen; i++) {
                         (function(i) {
@@ -207,10 +226,10 @@ $(document).ready(function() {
                             tileItems[i].imgFlag1 = true;
                             tileItems[i].imgFlag2 = true;
                             EventUtil.addHandler(tileItems[i], 'mouseover', function() {
-                                clearInterval(timer);
+                                clearTimeout(timer);
                             });
                             EventUtil.addHandler(tileItems[i], 'mouseout', function() {
-                                timer = setInterval(randomAnimation, 5000);
+                                timer = setTimeout(randomAnimation, 5000);
                             });
                         }(i));
                     }
@@ -309,9 +328,15 @@ $(document).ready(function() {
                             tileImgs[1].src = centerImgArr[count];
                             tileImgs[2].src = rightImgArr[count];
                             count++;
+                            wwuCount++;
+                            if (wwuCount < Infinity) {
+                                timer = setTimeout(autoAnim, 3000);
+                            } else {
+                                location.reload();
+                            }
                         }
 
-                        timer = setInterval(autoAnim, 3000);
+                        timer = setTimeout(autoAnim, 3000);
                     })();
                 })();
             }
@@ -604,7 +629,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     var storage = window.sessionStorage;
-    var userObj = {username: null};
+    var userObj = { username: null };
 
     if (parseInt(storage.getItem('loginState')) === 1) {
         $('#signInModal').modal('hide');
@@ -653,7 +678,7 @@ $(document).ready(function() {
                 }
             });
         });
-        $('.nav-item-logout').click(function(){
+        $('.nav-item-logout').click(function() {
             storage.clear();
             $('.nav-item-js').css('display', 'none');
             $('.nav-item-logout').css('display', 'none');
