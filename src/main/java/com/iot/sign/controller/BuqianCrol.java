@@ -34,41 +34,41 @@ public class BuqianCrol {
 
     @RequestMapping(value = "/apply", produces = "application/text")
     @ResponseBody
-    public String apply(@RequestParam(required = false) String reason,@RequestParam Integer number) throws IOException {
+    public String apply(@RequestParam(required = false) String reason, @RequestParam Integer number) throws IOException {
 
         String name = getCurrentUsername();
-        Buqian buqian = new Buqian(name, number + "小时",reason);
+        Buqian buqian = new Buqian(name, number + "小时", reason);
 
-        if (buqianRepo.save(buqian)!=null){
+        if (buqianRepo.save(buqian) != null) {
             return "申请成功";
-        }else {
+        } else {
             return "申请失败";
         }
     }
 
     @RequestMapping("/showReviewPage")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
-    public String showReviewPage(){
+    public String showReviewPage() {
         return "reviewBuqian";
     }
 
     @RequestMapping("/review")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     @ResponseBody
-    public List<Buqian> review(){
+    public List<Buqian> review() {
         List<Buqian> buqians = buqianRepo.findByStatusEq0();
         return buqians;
     }
 
     @RequestMapping("/setBuqianSuccessful")
     @ResponseBody
-    public void setBuqianSuccessful(@RequestParam Long id){
+    public void setBuqianSuccessful(@RequestParam Long id) {
         buqianRepo.setBuqianSuccessful(id);
     }
 
     @RequestMapping("/setBuqianFailed")
     @ResponseBody
-    public void setBuqianFailed(@RequestParam Long id){
+    public void setBuqianFailed(@RequestParam Long id) {
         buqianRepo.setBuqianFailed(id);
     }
 }
