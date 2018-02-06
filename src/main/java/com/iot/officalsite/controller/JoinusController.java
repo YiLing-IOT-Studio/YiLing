@@ -16,7 +16,7 @@ public class JoinusController {
     @Autowired
     private DateRepository dateRepository;
 
-    @RequestMapping("/joinus")
+    @RequestMapping("/joinus.html")
     public ModelAndView join() {
         TimeUtil timeUtil = new TimeUtil();
         ModelAndView mav = new ModelAndView();

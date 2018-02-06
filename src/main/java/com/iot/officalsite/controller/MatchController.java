@@ -16,7 +16,7 @@ public class MatchController {
     @Autowired
     private DateRepository dateRepository;
 
-    @RequestMapping("/match")
+    @RequestMapping("/match.html")
     public ModelAndView competition() {
 
         TimeUtil timeUtil = new TimeUtil();

@@ -14,22 +14,17 @@ public class IndexController {
         return "yiling";
     }
 
-    @RequestMapping("/glory")
+    @RequestMapping("/glory.html")
     public String glory() {
         return "glory";
     }
 
-    @RequestMapping("/info")
+    @RequestMapping("/info.html")
     public String info() {
         return "info";
     }
 
-    @RequestMapping("/registration")
-    public String registration() {
-        return "registration";
-    }
-
-    @RequestMapping("/message")
+    @RequestMapping("/message.html")
     public String message() {
         return "message";
     }
@@ -39,12 +34,12 @@ public class IndexController {
         return "failed";
     }
 
-    @RequestMapping("/family")
+    @RequestMapping("/family.html")
     public String aboutus_other() {
         return "family";
     }
 
-    @RequestMapping("/aboutus")
+    @RequestMapping("/aboutus.html")
     public String about() {
         return "aboutUs";
     }

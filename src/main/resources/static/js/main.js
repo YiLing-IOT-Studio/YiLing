@@ -352,7 +352,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             C <br/> 智能硬件 <br/> 物联网
                         </div>
-                        <a href="/direction/flush" class="btn btn-learn-more btn-sm">学习嵌入式</a>
+                        <a href="/direction/flushbonading.html" class="btn btn-learn-more btn-sm">学习嵌入式</a>
                     </section>
                 </div>
                 <div class="card card-bc">
@@ -362,7 +362,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             Java <br/> 云服务 <br/> 数据库
                         </div>
-                        <a href="/direction/end" class="btn btn-learn-more btn-sm">学习 Web 后端</a>
+                        <a href="/direction/web-back.html" class="btn btn-learn-more btn-sm">学习 Web 后端</a>
                     </section>
                 </div>
                 <div class="card card-an">
@@ -372,7 +372,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             Java <br/> 移动终端 <br/> PWA
                         </div>
-                        <a href="/direction/android" class="btn btn-learn-more btn-sm">学习 Android</a>
+                        <a href="/direction/android.html" class="btn btn-learn-more btn-sm">学习 Android</a>
                     </section>
                 </div>
                 <div class="card card-fe">
@@ -382,7 +382,7 @@ $(document).ready(function() {
                         <div class="card-content">
                             HTML、CSS、JavaScript、ES6 <br/> Vue.js、webpack <br/> Node.js、Express、MongoDB <br/>
                         </div>
-                        <a href="/direction/fronted" class="btn btn-learn-more btn-sm">学习 Web 前端</a>
+                        <a href="/direction/web-fronted.html" class="btn btn-learn-more btn-sm">学习 Web 前端</a>
                     </section>
                 </div>`).addClass('animated');
             }
@@ -466,15 +466,15 @@ $(document).ready(function() {
                         
                         <span class="website-info">培养方向</span>
                     </a>
-                    <a href="/match" class="yl-website-link text-center">
+                    <a href="/match.html" class="yl-website-link text-center">
                         
                         <span class="website-info">创意大赛</span>
                     </a>
-                    <a href="/glory" class="yl-website-link text-center">
+                    <a href="/glory.html" class="yl-website-link text-center">
                         
                         <span class="website-info">开源空间</span>
                     </a>
-                    <a href="/joinus" class="yl-website-link text-center">
+                    <a href="/joinus.html" class="yl-website-link text-center">
                         
                         <span class="website-info">招新网站</span>
                     </a>
@@ -482,7 +482,7 @@ $(document).ready(function() {
                         
                         <span class="website-info">考试系统</span>
                     </a>
-                    <a href="/family" class="yl-website-link text-center">
+                    <a href="/family.html" class="yl-website-link text-center">
                         
                         <span class="website-info">翼灵一家人</span>
                     </a>

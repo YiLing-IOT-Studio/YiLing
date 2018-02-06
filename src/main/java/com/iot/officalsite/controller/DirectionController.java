@@ -15,22 +15,22 @@ public class DirectionController {
         return "main";
     }
 
-    @RequestMapping("/android")
+    @RequestMapping("/android.html")
     public String android() {
         return "android";
     }
 
-    @RequestMapping("/flush")
+    @RequestMapping("/flushbonading.html")
     public String flush() {
         return "flushbonading";
     }
 
-    @RequestMapping("/end")
+    @RequestMapping("/web-back.html")
     public String back() {
         return "webBack";
     }
 
-    @RequestMapping("/fronted")
+    @RequestMapping("/web-fronted.html")
     public String fronted() {
         return "webFronted";
     }
