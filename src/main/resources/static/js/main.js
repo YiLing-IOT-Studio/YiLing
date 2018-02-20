@@ -3,10 +3,10 @@ $(document).ready(function() {
 
         //Navigation
         lockAnchors: false,
-        anchors: ['signin', 'welcome', 'learn', 'ExcellentMan', 'JoinUs', 'AboutUs'],
+        anchors: ['loginPage', 'welcomePage', 'studyPage', 'infoPage', 'joinPage', 'morePage'],
         navigation: true,
-        navigationPosition: 'left',
-        navigationTooltips: ['signin', 'welcome', 'learn', 'ExcellentMan', 'JoinUs', 'AboutUs'],
+        navigationPosition: 'right',
+        //navigationTooltips: ['loginPage', 'welcomePage', 'studyPage', 'infoPage', 'joinPage', 'morePage'],
         showActiveTooltip: false,
 
         //Scrolling
@@ -466,7 +466,7 @@ $(document).ready(function() {
                         
                         <span class="website-info">培养方向</span>
                     </a>
-                    <a href="/match.html" class="yl-website-link text-center">
+                    <a href="/match.html" class="yl-website-link text-center link-mobile">
                         
                         <span class="website-info">创意大赛</span>
                     </a>
@@ -474,11 +474,11 @@ $(document).ready(function() {
                         
                         <span class="website-info">开源空间</span>
                     </a>
-                    <a href="/joinus.html" class="yl-website-link text-center">
+                    <a href="/joinus.html" class="yl-website-link text-center link-mobile">
                         
                         <span class="website-info">招新网站</span>
                     </a>
-                    <a href="javascript:void(0);" target="_blank" class="yl-website-link text-center">
+                    <a href="javascript:void(0);" target="_blank" class="yl-website-link text-center link-mobile">
                         
                         <span class="website-info">考试系统</span>
                     </a>
@@ -611,8 +611,8 @@ $(document).ready(function() {
             }());
         },
     });
-    $.fn.fullpage.silentMoveTo('welcome', 1);
 
+    $.fn.fullpage.silentMoveTo('welcomePage', 0);
 
     $('.yl-time').text(new Date().getFullYear());
 
@@ -626,12 +626,8 @@ $(document).ready(function() {
             $.addClass('fa-caret-right');
         }
 
-    })
+    });
 
-
-});
-
-$(document).ready(function() {
     var storage = window.sessionStorage;
     var userObj = { username: null };
 
@@ -692,4 +688,5 @@ $(document).ready(function() {
         });
     })();
 
+    document.body.style.visibility = 'visible'
 });
