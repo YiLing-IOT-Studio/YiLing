@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
-    @RequestMapping("/index")
-    public String login() {
-        return "yiling";
-    }
+    //@RequestMapping("/index")
+    //public String login() {
+    //    return "yiling";
+    //}
 
     @RequestMapping("/glory.html")
     public String glory() {
