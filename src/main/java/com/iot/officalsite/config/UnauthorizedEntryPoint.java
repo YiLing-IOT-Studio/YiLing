@@ -11,16 +11,15 @@ import java.io.IOException;
 /**
  * Created by 李攀 on 2018/1/11.
  */
-public class
-UnauthorizedEntryPoint implements AuthenticationEntryPoint {
+public class UnauthorizedEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
         if(isAjaxRequest(request)){
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED,authException.getMessage());
         }else{
-            response.sendRedirect("/index");
+            //response.sendRedirect("/index");
+            response.sendRedirect("/");
         }
-
     }
 
     public static boolean isAjaxRequest(HttpServletRequest request) {

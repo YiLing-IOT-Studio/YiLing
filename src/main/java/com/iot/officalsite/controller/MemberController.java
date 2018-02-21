@@ -32,13 +32,11 @@ public class MemberController {
             memberRepository.setPassword(newPassword, username);
             mav.setViewName("message");
             mav.addObject("error", "修改密码成功 ！");
-
             return mav;
         } else {
 
             mav.setViewName("message");
             mav.addObject("error", "修改失败，请检查密码格式或是否一致 ！（密码长度不超过10）");
-
             return mav;
         }
     }
