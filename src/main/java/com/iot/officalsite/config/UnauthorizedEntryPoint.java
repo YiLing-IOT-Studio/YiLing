@@ -17,7 +17,6 @@ public class UnauthorizedEntryPoint implements AuthenticationEntryPoint {
         if(isAjaxRequest(request)){
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED,authException.getMessage());
         }else{
-            //response.sendRedirect("/index");
             response.sendRedirect("/");
         }
     }
