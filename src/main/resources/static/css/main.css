@@ -304,6 +304,7 @@
 }
 
 .card {
+    position: relative;
     width: 22%;
     padding: 10px;
     background-color: transparent;
@@ -332,6 +333,7 @@
 .card-body .btn {
     position: absolute;
     left: 50%;
+    bottom: -10px;
     transform: translateX(-50%);
     font-size: 12px;
     cursor: pointer;
