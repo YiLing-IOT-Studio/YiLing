@@ -10,11 +10,11 @@
     <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=LKoy5ZY7sOIRQ17nIQ8zIr5I9ZNmVnzX"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
     <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="/css/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
 </head>
 
 <body style="visibility: hidden;">
@@ -67,18 +67,20 @@
         <!-- page one -->
         <div class="section">
             <section class="sec-header text-center">
-                <h1 class="h2 animated fadeIn">翼灵物联工作室</h1>
-                <h2 class="h5 animated fadeIn">The YiLing Studio</h2>
-                <div class="yl-intro animated fadeIn">
-                    <div><span class="lead">翼灵物联工作室</span> - 一支追求技术、开发与自由的大学生团队。</div>
-                    <div class="yl-translation">YiLing-ers pursue technology, openness and freedom.</div>
+                <div class="loginpage-for-mobile">
+                    <h1 class="h2 animated fadeIn">翼灵物联工作室</h1>
+                    <h2 class="h5 animated fadeIn">The YiLing Studio</h2>
+                    <div class="yl-intro animated fadeIn">
+                        <div><span class="lead">翼灵物联工作室</span> - 一支追求技术、开发与自由的大学生团队。</div>
+                        <div class="yl-translation">YiLing-ers pursue technology, openness and freedom.</div>
+                    </div>
                 </div>
             </section>
             <section class="sec-body centerpage login-btn">
                 <button class="btn btn-success" data-toggle="modal" data-target="#signInModal">使用翼灵 ID 登录内部系统</button>
             </section>
             <section class="sec-body-for-login">
-                <a class="btn btn-success" href="/signDetail" target="_blank" class="yl-website-link text-center">
+                <a class="btn btn-success" href="/signDetail" target="_blank">
                     <span class="website-info">前往签到系统</span>
                 </a>
             </section>
@@ -194,7 +196,7 @@
         <div class="section">
             <section class="sec-header secpage text-center">
                 <h2 class="h2">学习方向</h2>
-                <h3 class="h5">We learn Embedded, Andriod and Web development.</h3>
+                <h3 class="h5 mobile-hidden">We learn Embedded, Andriod and Web development.</h3>
             </section>
             <section class="sec-body">
                 <div class="card-list animated">
@@ -203,7 +205,7 @@
                         <section class="card-body">
                             <div class="card-title">嵌入式</div>
                             <div class="card-content">
-                                C <br/> 智能硬件 <br/> 物联网
+                                C/C++, 51 单片机，STM32 树莓派，ardinuo，Linux，FPGA，模拟电路，数字电路
                             </div>
                             <a href="/direction/flushbonading.html" class="btn btn-learn-more btn-sm">学习嵌入式</a>
                         </section>
@@ -213,7 +215,7 @@
                         <section class="card-body">
                             <div class="card-title">Web 后端</div>
                             <div class="card-content">
-                                Java <br/> 云服务 <br/> 数据库
+                                Java/C++，Tomcat，数据库，SpringMVC，Hibernate，Mybatis，Security，shiro，redis，ehcache，Nginx
                             </div>
                             <a href="/direction/web-back.html" class="btn btn-learn-more btn-sm">学习 Web 后端</a>
                         </section>
@@ -223,7 +225,7 @@
                         <section class="card-body">
                             <div class="card-title">Android</div>
                             <div class="card-content">
-                                Java <br/> 移动终端 <br/> PWA
+                                Java/Kotlin，Android Studio，MVP，MVVM，MaterialDesign，OKhttp Retrofit，Gson，realm，greendao，butterknife
                             </div>
                             <a href="/direction/android.html" class="btn btn-learn-more btn-sm">学习 Android</a>
                         </section>
@@ -233,10 +235,24 @@
                         <section class="card-body">
                             <div class="card-title">Web 前端</div>
                             <div class="card-content">
-                                HTML、CSS、JavaScript、ES6 <br/> Vue.js、webpack <br/> Node.js、Express、MongoDB <br/>
+                                学习核心：HTML5，CSS3，JavaScript，ES6（ES7+），计算机网络及 HTTP 协议，浏览器原理，数据结构与基本算法
                             </div>
                             <a href="/direction/web-fronted.html" class="btn btn-learn-more btn-sm">学习 Web 前端</a>
                         </section>
+                    </div>
+                </div>
+                <div class="card-list animated card-list-for-mobile">
+                    <div class="card">
+                        <a class="lead" href="/direction/flushbonading.html">嵌入式</a> C/C++, 51 单片机，STM32 树莓派，ardinuo，Linux，FPGA，模拟电路，数字电路
+                    </div>
+                    <div class="card">
+                        <a class="lead" href="/direction/web-back.html">Web 后端</a> Java/C++，Tomcat，数据库，SpringMVC，Hibernate，Mybatis，Security，shiro，redis，ehcache，Nginx
+                    </div>
+                    <div class="card">
+                        <a class="lead" href="/direction/android.html">Android</a> Java/Kotlin，Android Studio，MVP，MVVM，MaterialDesign，OKhttp Retrofit，Gson，realm，greendao，butterknife
+                    </div>
+                    <div class="card">
+                        <a class="lead" href="/direction/web-fronted.html">Web 前端</a> 学习核心：HTML5，CSS3，JavaScript，ES6（ES7+），计算机网络及 HTTP 协议，浏览器原理，数据结构与基本算法
                     </div>
                 </div>
             </section>
@@ -244,7 +260,7 @@
         <div class="section">
             <section class="sec-header secpage text-center">
                 <h2 class="h2">关于我们</h2>
-                <h3 class="h5">Honor, Project, and Programmer.</h3>
+                <h3 class="h5 mobile-hidden">Honor, Project, and Programmer.</h3>
             </section>
             <section class="sec-body secpage">
                 <div class="members animated">
@@ -311,12 +327,37 @@
                         </div>
                     </div>
                 </div>
+                <div class="members animated members-for-mobile">
+                    <div class="single-member">
+                        <strong class="lead">人物</strong>
+                        <p>李国冬 - 翼灵创始人</p>
+                        <p>陈庙红 - 现工作于大疆</p>
+                        <p>吴豪杰 - 现工作于美团</p>
+                    </div>
+                    <div class="single-member">
+                        <a class="lead" href="/glory.html">项目</a>
+                        <p>基于自动导航及跌倒检测的智能安全鞋</p>
+                        <p>PMACB-OA系统</p>
+                        <p>基于微信平台的智能家居应用系统</p>
+                    </div>
+                    <div class="single-member">
+                        <a class="lead" href="/glory.html">荣誉</a>
+                        <p>中国大学生计算机设计大赛 · 全国总决赛一等奖</p>
+                        <p>第三届全国高校物联网应用创新大赛 · 西南赛区一等奖</p>
+                        <p>2016（TI杯）全国大学生物联网设计竞赛 · 华中及西南赛区一等奖</p>
+                    </div>
+                    <div class="desktop-hidden text-right">
+                        <a class="btn btn-sm btn-primary btn-block" href="/family.html">
+                            关于翼灵一家人
+                        </a>
+                    </div>
+                </div>
             </section>
         </div>
         <div class="section">
             <div class="yl-container text-center">
                 <h2 class="h2">加入我们</h2>
-                <h3 class="h5">Join us to enjoy programming.</h3>
+                <h3 class="h5 mobile-hidden">Join us to enjoy programming.</h3>
                 <div class="yl-intro animated">
                     <p>我们是一支以嵌入式开发特色，以云端、手机端、PC 端协作开发的团队。<br/><span class="yl-translation">We are a team developing Embedded system specially, and collaborative with Cloud, Mobile and PC development.</span></p>
                     <p>如果你有改变世界的想法，如果你有脚踏实地的耐力，<br/><span class="yl-translation">If you have the idea of changing the world, or have a down-to-earth endurance,</span>
@@ -333,7 +374,7 @@
         <div class="section">
             <div class="yl-container text-center">
                 <h2 class="h2">了解更多</h2>
-                <h3 class="h5">Here you can learn more about us.</h3>
+                <h3 class="h5 mobile-hidden">Here you can learn more about us.</h3>
                 <div class="yl-website">
                     <a href="/" class="yl-website-link text-center">
                         <span class="website-info">翼灵官网</span>
@@ -411,18 +452,18 @@
         </div>
     </div>
 
-    <script src="/js/iconfont.js"></script>
-    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/iconfont.js"></script>
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
     <!-- This following line is optional. Only necessary if you use the optioncss3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <script src="/js/jquery.easings.min.js"></script>
+    <script src="../static/js/jquery.easings.min.js"></script>
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-    <script src="/js/scrolloverflow.min.js"></script>
-    <script src="/js/jquery.fullPage.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/move.min.js"></script>
-    <script src="/js/funLib.js"></script>
-    <script src="/js/tile.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="../static/js/scrolloverflow.min.js"></script>
+    <script src="../static/js/jquery.fullPage.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/move.min.js"></script>
+    <script src="../static/js/funLib.js"></script>
+    <script src="../static/js/tile.js"></script>
+    <script src="../static/js/main.js"></script>
 </body>
 
 </html>
