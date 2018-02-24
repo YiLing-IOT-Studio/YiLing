@@ -892,7 +892,7 @@ p {
         position: relative;
         transform: translate(-20%, -15%);
         display: block;
-        width: 150%;
+        width: 120%;
         margin: 0 auto;
         height: auto;
     }
@@ -905,7 +905,7 @@ p {
     .desktop-hidden {
         display: block;
     }
-    .desktop-hidden .btn {
+    /* .desktop-hidden .btn {
         width: 105%;
-    }
+    } */
 }
