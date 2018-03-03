@@ -47,13 +47,13 @@ public class BuqianCrol {
     }
 
     @RequestMapping("/showReviewPage")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ROLE_TIMER')")
     public String showReviewPage() {
         return "reviewBuqian";
     }
 
     @RequestMapping("/review")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ROLE_TIMER')")
     @ResponseBody
     public List<Buqian> review() {
         List<Buqian> buqians = buqianRepo.findByStatusEq0();

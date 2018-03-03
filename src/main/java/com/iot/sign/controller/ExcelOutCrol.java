@@ -32,7 +32,7 @@ import java.util.List;
 @Controller
 @Slf4j
 @RequestMapping("/excelout")
-@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+@PreAuthorize("hasAnyAuthority('ROLE_TIMER')")
 public class ExcelOutCrol {
 
     @Autowired
