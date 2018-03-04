@@ -1822,7 +1822,7 @@ Expr = Sizzle.selectors = {
 										return false;
 									}
 								}
-								// Reverse direct for :only-* (if we haven't yet done so)
+								// Reverse direction for :only-* (if we haven't yet done so)
 								start = dir = type === "only" && !start && "nextSibling";
 							}
 							return true;
