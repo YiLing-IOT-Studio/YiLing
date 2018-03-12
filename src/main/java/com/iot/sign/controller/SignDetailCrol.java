@@ -22,6 +22,8 @@ import java.util.Map;
  * Created by LES on 2018/1/5.
  * 查询个人签到记录
  */
+
+
 @Controller
 @RequestMapping("/signDetail")
 public class SignDetailCrol {
@@ -29,7 +31,6 @@ public class SignDetailCrol {
     @Autowired
     private SignRecordsRepo signRecordsRepo;
 
-    //!!!
     @Autowired
     private BuqianRepo buqianRepo;
 

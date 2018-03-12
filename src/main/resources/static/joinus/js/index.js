@@ -182,7 +182,7 @@ window.onload=function(){
                 },
                 success:function () {
                     alert("报名成功！");
-                    window.location.replace("http://localhost:9999")
+                    window.location.replace("http://119.29.233.28:9999/joinus.html")
                     console.log(formJ);
                 },
                 error:function () {

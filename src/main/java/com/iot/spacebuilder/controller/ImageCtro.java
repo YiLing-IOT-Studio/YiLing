@@ -59,7 +59,7 @@ public class ImageCtro {
             img.setType(type);
             FileUtils.upload(image.getInputStream(),img.getUrl());
             imageRepository.save(img);
-            response.sendRedirect("/glory");
+            response.sendRedirect("/glory.html");
         }else if(type==2){
             img.setGloryName(request.getParameter("gloryName"));
             img.setRanking(request.getParameter("ranking"));
@@ -72,7 +72,7 @@ public class ImageCtro {
             FileUtils.upload(image.getInputStream(),img.getUrl());
             imageRepository.save(img);
 //            request.getSession().setAttribute("imageList", imageRepository.findAll());
-            response.sendRedirect("/glory");
+            response.sendRedirect("/glory.html");
         }
         else if (type == 3) {
 //            String ids = request.getParameter("ids");
