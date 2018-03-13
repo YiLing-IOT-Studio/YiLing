@@ -3,6 +3,8 @@ package com.iot.officalsite.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * Created by 李攀 on 2017/12/30.
  */
@@ -10,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     @RequestMapping("/glory.html")
-    public String glory() {
+    public String glory(HttpServletResponse response) {
+        response.setHeader("Cache-Control", "cache");
         return "glory";
     }
 
@@ -24,18 +27,21 @@ public class IndexController {
         return "message";
     }
 
-    @RequestMapping("/failed")
-    public String failed() {
-        return "failed";
+    @RequestMapping("/")
+    public String index(HttpServletResponse response) {
+        response.setHeader("Cache-Control", "cache");
+        return "yiling";
     }
 
     @RequestMapping("/family.html")
-    public String aboutus_other() {
+    public String aboutus_other(HttpServletResponse response) {
+        response.setHeader("Cache-Control", "cache");
         return "family";
     }
 
     @RequestMapping("/aboutus.html")
-    public String about() {
+    public String about(HttpServletResponse response) {
+        response.setHeader("Cache-Control", "cache");
         return "aboutUs";
     }
 

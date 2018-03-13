@@ -1,4 +1,4 @@
-package com.iot.officalsite.utils;
+package com.iot.officalsite.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,7 +22,6 @@ public class TimeUtil {
             return number;
         } catch (ParseException e) {
             e.printStackTrace();
-
             return 2;
         }
 

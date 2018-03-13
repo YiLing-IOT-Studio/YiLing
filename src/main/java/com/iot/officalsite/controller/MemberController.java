@@ -17,24 +17,27 @@ public class MemberController {
     @Autowired
     private MemberRepository memberRepository;
 
-    public String getCurrentUsername() {
+    private String getCurrentUsername() {
         return SecurityContextHolder.getContext().getAuthentication().getName();
     }
 
     @RequestMapping("/modify")
-    public ModelAndView password(@RequestParam String oldPassword, @RequestParam String newPassword, @RequestParam String newPassword2) {
+    public ModelAndView password(@RequestParam String oldPassword,
+                                 @RequestParam String newPassword,
+                                 @RequestParam String newPassword2) {
 
         ModelAndView mav = new ModelAndView();
         String username = getCurrentUsername();
 
-        if (oldPassword.equals(memberRepository.findPasswordByName(username)) && newPassword.equals(newPassword2) && newPassword.length() <= 10) {
-
+        final boolean standard = oldPassword.equals(memberRepository.findPasswordByName(username))
+                        && newPassword.equals(newPassword2)
+                        && newPassword.length() <= 10;
+        if (standard) {
             memberRepository.setPassword(newPassword, username);
             mav.setViewName("message");
             mav.addObject("error", "修改密码成功 ！");
             return mav;
         } else {
-
             mav.setViewName("message");
             mav.addObject("error", "修改失败，请检查密码格式或是否一致 ！（密码长度不超过10）");
             return mav;

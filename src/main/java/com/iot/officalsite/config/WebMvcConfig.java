@@ -13,6 +13,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
-        registry.addViewController("/").setViewName("yiling");
+        registry.addViewController("/failed").setViewName("failed");
     }
 }
