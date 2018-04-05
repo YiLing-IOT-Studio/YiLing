@@ -35,16 +35,19 @@ public class FileController {
 
     @RequestMapping(value = "/submit", method = RequestMethod.POST)
     @ResponseBody
-    public ModelAndView uploadFile(HttpServletRequest request, HttpServletResponse response, @RequestParam(value = "file") MultipartFile multipartFile) throws UnsupportedEncodingException {
+    public ModelAndView uploadFile(HttpServletRequest request,
+                                   HttpServletResponse response,
+                                   @RequestParam(value = "file")
+                                               MultipartFile multipartFile) throws UnsupportedEncodingException {
 
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
 
-        Long length = multipartFile.getSize();//返回的是字节，1M=1024KB=1048576字节 1KB=1024Byte
+        Long length = multipartFile.getSize(); // 返回的是字节，1M=1024KB=1048576字节 1KB=1024Byte
         String fileName = multipartFile.getOriginalFilename();
-        String suffix = fileName.substring(fileName.lastIndexOf(".")).toLowerCase().trim();//文件后缀名
-        //String prefix = fileName.substring(0,fileName.lastIndexOf("."));//文件后缀名
+        String suffix = fileName.substring(fileName.lastIndexOf(".")).toLowerCase().trim(); // 文件后缀名
+        //String prefix = fileName.substring(0,fileName.lastIndexOf(".")); // 文件后缀名
 
         String fileType = ".txt,.docx,.doc";
         //String[] typeArray = fileType.split(",");
@@ -103,7 +106,8 @@ public class FileController {
             response.reset();
             response.setCharacterEncoding("utf-8");
             response.setHeader("content-type", "application/octet-stream");
-            response.setHeader("Content-Disposition", "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8"));
+            response.setHeader("Content-Disposition", "attachment; filename="
+                    + URLEncoder.encode(fileName, "UTF-8"));
             OutputStream output = response.getOutputStream();
 
             FileUtil.downloadFile(file, output);
@@ -126,8 +130,9 @@ public class FileController {
             response.reset();
             response.setCharacterEncoding("utf-8");
             response.setHeader("content-type", "application/octet-stream");
-            response.setHeader("Content-Disposition", "attachment; filename=" + URLEncoder.encode(zipName, "UTF-8"));//解决中文名乱码
-            OutputStream output = response.getOutputStream();//得到服务器的输入流
+            response.setHeader("Content-Disposition", "attachment; filename="
+                    + URLEncoder.encode(zipName, "UTF-8")); // 解决中文名乱码
+            OutputStream output = response.getOutputStream(); // 得到服务器的输入流
 
             FileUtil.zipFile(zipPath, filesList);
             FileUtil.downloadFile(zipPath, output);

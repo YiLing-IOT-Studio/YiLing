@@ -47,7 +47,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         //http.headers().frameOptions().disable();
 
-        http.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
+        http.headers()
+                .addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
                 .and().exceptionHandling().authenticationEntryPoint(new UnauthorizedEntryPoint())
                 .and().authorizeRequests()
                 .antMatchers("/setDate").hasAuthority("ROLE_ADMIN")
