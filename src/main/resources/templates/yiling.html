@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="lrt" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>翼灵物联工作室</title>
-    <link rel="short icon" type="image/x-icon" href="../static/img/logo.png" />
+    <meta name="description" content="翼灵物联工作室 - 是西南石油大学物联网学生实验室。目前，工作室主要学习嵌入式开发、Adriod 开发、Web 后端与 Web 前端开发。" />
+    <link rel="icon" type="image/png" href="../static/img/logo.png" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/animate.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/css/bootstrap.min.css" /> -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/jquery.fullPage.css" /> -->
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.6/jquery.fullpage.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=LKoy5ZY7sOIRQ17nIQ8zIr5I9ZNmVnzX"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
-    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
-    <link rel="stylesheet" type="text/css" href="../static../static/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
 </head>
 
 <body style="visibility: hidden;">
-    <!-- <div id="pageloading">正在加载...</div> -->
     <div id="fullpage">
         <div class="header">
             <nav class="navbar navbar-light bg-faded navbar-toggleable-md">
@@ -80,7 +89,7 @@
                 <button class="btn btn-success" data-toggle="modal" data-target="#signInModal">使用翼灵 ID 登录内部系统</button>
             </section>
             <section class="sec-body-for-login">
-                <a class="btn btn-success" href="/signDetail" target="_blank">
+                <a class="btn btn-success" href="/signDetail" target="_blank" rel="noopener noreferrer">
                     <span class="website-info">前往签到系统</span>
                 </a>
             </section>
@@ -102,13 +111,13 @@
                             <p>YiLing IOT Studio</p>
                         </div>
                         <div class="tile-item tile-item-js">
-                            <img src="../static/img/brand/brand_we_1_200x200.jpg" class="person-img" alt="brand_we" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/brand/brand_we_1_200x200.jpg" class="person-img" alt="brand_we" />
                         </div>
                         <div class="tile-item tile-item-js">
-                            <img src="../static/img/brand/brand_want_2_200x200.jpg" class="person-img" alt="brand_want" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/brand/brand_want_2_200x200.jpg" class="person-img" alt="brand_want" />
                         </div>
                         <div class="tile-item tile-item-js">
-                            <img src="../static/img/brand/brand_you_2_200x200.jpg" class="person-img" alt="brand_you" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/brand/brand_you_2_200x200.jpg" class="person-img" alt="brand_you" />
                         </div>
                         <div class="tile-item tile-weather">
                             <div class="weather"></div>
@@ -128,25 +137,25 @@
                     </div>
                     <div class="tile-con tile-main">
                         <div class="tile-item swiper tile-mobile tile-mobile-5">
-                            <img src="../static/img/2016Group_300x320.jpg" class="swiper-img img1" alt="16" />
-                            <img src="../static/img/AndroidGroup_300x320.jpg" class="swiper-img img2" alt="android" />
-                            <img src="../static/img/EmbeddedGroup_300x320.jpg" class="swiper-img img3" alt="embedded" />
-                            <img src="../static/img/BackendGroup_300x320.jpg" class="swiper-img img4" alt="backend" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/2016Group_300x320.jpg" class="swiper-img img1" alt="16" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/AndroidGroup_300x320.jpg" class="swiper-img img2" alt="android" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/EmbeddedGroup_300x320.jpg" class="swiper-img img3" alt="embedded" />
+                            <img src="http://p22svme3d.bkt.clouddn.com/BackendGroup_300x320.jpg" class="swiper-img img4" alt="backend" />
                         </div>
                     </div>
                     <div class="tile-con tile-right">
                         <div class="tile-item">
                             <span class="sticker">前端</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/frontend/fe_liyoubo_200x200.jpg" class="tile-img" alt="frontend" />
-                                <img src="../static/img/frontend/fe_liwenfei_200x200.jpg" class="tile-img" alt="frontend" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/frontend/fe_liyoubo_200x200.jpg" class="tile-img" alt="frontend" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/frontend/fe_liwenfei_200x200.jpg" class="tile-img" alt="frontend" />
                             </div>
                         </div>
                         <div class="tile-item">
                             <span class="sticker">后端</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/backend/be_xiongxiaoyu_200x200.jpg" alt="backend" />
-                                <img src="../static/img/backend/be_jinglili_200x200.jpg" alt="backend" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/backend/be_xiongxiaoyu_200x200.jpg" alt="backend" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/backend/be_jinglili_200x200.jpg" alt="backend" />
                             </div>
                         </div>
                         <div class="tile-item">
@@ -159,8 +168,8 @@
                         <div class="tile-item">
                             <span class="sticker">嵌入式</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/embedded/em_yigangxi_200x200.jpg" alt="embedded" />
-                                <img src="../static/img/embedded/em-chengmiaohong-200x200.jpg" alt="embedded" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/embedded/em_yigangxi_200x200.jpg" alt="embedded" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/embedded/em-chengmiaohong-200x200.jpg" alt="embedded" />
                             </div>
                         </div>
                         <div class="tile-item tile-news col-item-2">
@@ -170,22 +179,22 @@
                         <div class="tile-item">
                             <span class="sticker">安卓</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/android/an_tangguangsheng_200x200.jpg" alt="android" />
-                                <img src="../static/img/android/an_zengxinrui_200x200.jpg" alt="android" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/andriod/an_tangguangsheng_200x200.jpg" alt="android" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/andriod/an_zengxinrui_200x200.jpg" alt="android" />
                             </div>
                         </div>
                         <div class="tile-item tile-join">
                             <span class="sticker">17 萌新</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/newMembers/new_fenglei_200x200.jpg" alt="newMembers" />
-                                <img src="../static/img/newMembers/new_xiaoyaqiong_200x200.jpg" alt="newMembers" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/newMembers/new_fenglei_200x200.jpg" alt="newMembers" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/group/newMembers/new_xiaoyaqiong_200x200.jpg" alt="newMembers" />
                             </div>
                         </div>
                         <div class="tile-item">
                             <span class="sticker">项目</span>
                             <div class="tile-item-content">
-                                <img src="../static/img/project/xun-che-xi-tong-200x200.jpg" alt="project" />
-                                <img src="../static/img/project/zhi-neng-an-quan-xie-200x200.jpg" alt="project" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/project/xun-che-xi-tong-200x200.jpg" alt="project" />
+                                <img src="http://p22svme3d.bkt.clouddn.com/project/zhi-neng-an-quan-xie-200x200.jpg" alt="project" />
                             </div>
                         </div>
                     </div>
@@ -391,7 +400,7 @@
                     <a href="/joinus.html" class="yl-website-link text-center link-mobile">
                         <span class="website-info">招新网站</span>
                     </a>
-                    <a href="javascript:void(0);" target="_blank" class="yl-website-link text-center link-mobile">
+                    <a href="javascript:void(0);" target="_blank" rel="noopener noreferrer" class="yl-website-link text-center link-mobile">
                         <span class="website-info">考试系统</span>
                     </a>
                     <a href="/family.html" class="yl-website-link text-center">
@@ -408,7 +417,7 @@
                 <span class="dot">·</span>
                 <a href="#">翼灵物联工作室</a>
                 <span class="dot">·</span>
-                <a href="https://github.com/YiLing-IOT-Studio/" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://github.com/YiLing-IOT-Studio/" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
                 <span class="dot">·</span>
                 <i class="fa fa-balance-scale"></i> MIT
             </div>
@@ -448,13 +457,16 @@
     </div>
 
     <script src="../static/js/iconfont.js"></script>
-    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="../static/js/jquery-3.2.1.min.js"></script> -->
     <!-- This following line is optional. Only necessary if you use the optioncss3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <script src="../static/js/jquery.easings.min.js"></script>
+    <!-- <script src="../static/js/jquery.easings.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.6/vendors/jquery.easings.min.js"></script>
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-    <script src="../static/js/scrolloverflow.min.js"></script>
-    <script src="../static/js/jquery.fullPage.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- <script src="../static/js/scrolloverflow.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.6/vendors/scrolloverflow.min.js"></script>
+    <!-- <script src="../static/js/jquery.fullPage.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
+    <!-- <script src="../static/js/bootstrap.min.js"></script> -->
     <script src="../static/js/move.min.js"></script>
     <script src="../static/js/funLib.js"></script>
     <script src="../static/js/tile.js"></script>

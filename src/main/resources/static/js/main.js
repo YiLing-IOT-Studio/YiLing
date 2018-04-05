@@ -271,32 +271,32 @@ $(document).ready(function() {
                     }
 
                     tileItems[0].imgs = [
-                        [' img/frontend/fe_liyoubo_200x200.jpg', ' img/frontend/fe_liwenfei_200x200.jpg'],
-                        [' img/frontend/fe_zhoudeng.jpg', ' img/frontend/fe_caoxuemei_200x200.jpg']
+                        ['http://p22svme3d.bkt.clouddn.com/group/frontend/fe_liyoubo_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/frontend/fe_liwenfei_200x200.jpg'],
+                        ['http://p22svme3d.bkt.clouddn.com/group/frontend/fe_zhoudeng.jpg', 'http://p22svme3d.bkt.clouddn.com/group/frontend/fe_caoxuemei_200x200.jpg']
                     ];
                     tileItems[1].imgs = [
-                        [' img/backend/be_xiongxiaoyu_200x200.jpg', ' img/backend/be_jinglili_200x200.jpg'],
-                        [' img/backend/be_wangping_200x200.jpg', ' img/backend/be_zhanghaiyang_200x200.jpg']
+                        ['http://p22svme3d.bkt.clouddn.com/group/backend/be_xiongxiaoyu_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/backend/be_jinglili_200x200.jpg'],
+                        ['http://p22svme3d.bkt.clouddn.com/group/backend/be_wangping_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/backend/be_zhanghaiyang_200x200.jpg']
                     ];
                     tileItems[2].imgs = [
                         [' img/glory/ji-suan-ji-she-ji-da-sai-yi-deng-jiang-200x200.jpg', ' img/glory/wu-lian-wang-she-ji-jing-sai-200x200.jpg'],
                         [' img/glory/wu-lian-wang-she-ji-jing-sai-2-200x200.jpg', ' img/glory/wu-lian-wang-she-ji-jing-sai-3-200x200.jpg']
                     ];
                     tileItems[3].imgs = [
-                        [' img/embedded/em_yigangxi_200x200.jpg', ' img/embedded/em-chengmiaohong-200x200.jpg'],
-                        [' img/embedded/em_jifengtao_200x200.jpg', ' img/embedded/em_duyu_200x200.jpg']
+                        ['http://p22svme3d.bkt.clouddn.com/group/embedded/em_yigangxi_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/embedded/em-chengmiaohong-200x200.jpg'],
+                        ['http://p22svme3d.bkt.clouddn.com/group/embedded/em_jifengtao_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/embedded/em_jifengtao_200x200.jpg']
                     ];
                     tileItems[5].imgs = [
-                        [' img/android/an_tangguangsheng_200x200.jpg', ' img/android/an_zengxinrui_200x200.jpg'],
-                        [' img/android/an_songqifei_200x200.jpg', ' img/android/an_duzeming_200x200.jpg']
+                        ['http://p22svme3d.bkt.clouddn.com/group/andriod/an_tangguangsheng_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/andriod/an_zengxinrui_200x200.jpg'],
+                        ['http://p22svme3d.bkt.clouddn.com/group/andriod/an_songqifei_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/andriod/an_duzeming_200x200.jpg']
                     ];
                     tileItems[6].imgs = [
-                        [' img/newMembers/new_fenglei_200x200.jpg', ' img/newMembers/new_xiaoyaqiong_200x200.jpg'],
-                        [' img/newMembers/new_xiongcheng_200x200.jpg', ' img/newMembers/new_pengzhen_200x200.jpg']
+                        ['http://p22svme3d.bkt.clouddn.com/group/newMembers/new_fenglei_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/newMembers/new_xiaoyaqiong_200x200.jpg'],
+                        ['http://p22svme3d.bkt.clouddn.com/group/newMembers/new_xiongcheng_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/group/newMembers/new_pengzhen_200x200.jpg']
                     ];
                     tileItems[7].imgs = [
-                        [' img/project/xun-che-xi-tong-200x200.jpg', ' img/project/zhi-neng-an-quan-xie-200x200.jpg'],
-                        [' img/project/wei-xin-xiao-cheng-xu-200x200.jpg', ' img/project/zhi-neng-xiao-che-200x200.jpg']
+                        ['http://p22svme3d.bkt.clouddn.com/project/xun-che-xi-tong-200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/project/zhi-neng-an-quan-xie-200x200.jpg'],
+                        ['http://p22svme3d.bkt.clouddn.com/project/wei-xin-xiao-cheng-xu-200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/project/zhi-neng-xiao-che-200x200.jpg']
                     ];
                 })();
                 (function() {
@@ -314,9 +314,9 @@ $(document).ready(function() {
 
                     var count = 0;
 
-                    var leftImgArr = [' img/brand/brand_we_1_200x200.jpg', ' img/brand/brand_we_2_200x200.jpg', ' img/brand/brand_we_2_200x200.jpg'];
-                    var centerImgArr = [' img/brand/brand_want_2_200x200.jpg', ' img/brand/brand_want_1_200x200.jpg', ' img/brand/brand_want_3_200x200.jpg'];
-                    var rightImgArr = [' img/brand/brand_you_2_200x200.jpg', ' img/brand/brand_you_2_200x200.jpg', ' img/brand/brand_you_1_200x200.jpg'];
+                    var leftImgArr = ['http://p22svme3d.bkt.clouddn.com/brand/brand_we_1_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/brand/brand_we_2_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/brand/brand_we_2_200x200.jpg'];
+                    var centerImgArr = ['http://p22svme3d.bkt.clouddn.com/brand/brand_want_2_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/brand/brand_want_1_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/brand/brand_want_3_200x200.jpg'];
+                    var rightImgArr = ['http://p22svme3d.bkt.clouddn.com/brand/brand_you_2_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/brand/brand_you_2_200x200.jpg', 'http://p22svme3d.bkt.clouddn.com/brand/brand_you_1_200x200.jpg'];
 
                     function autoAnim() {
                         if (count >= 3) {
