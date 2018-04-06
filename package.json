@@ -1,0 +1,39 @@
+{
+    "name": "yiling",
+    "version": "3.0.0",
+    "description": "翼灵物联工作室官方网站",
+    "main": "app.js",
+    "scripts": {
+        "build": "webpack --config webpack.prod.js --mode production",
+        "start": "webpack-dev-server --open --config webpack.dev.js --mode development"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YiLing-IOT-Studio/YiLing.git"
+    },
+    "keywords": [
+        "翼灵",
+        "SWPU"
+    ],
+    "author": {
+        "name": "Leo",
+        "github": "https://github.com/swpuLeo/"
+    },
+    "bugs": {
+        "url": "https://github.com/YiLing-IOT-Studio/YiLing/issues"
+    },
+    "homepage": "https://github.com/YiLing-IOT-Studio/YiLing#readme",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "clean-webpack-plugin": "^0.1.19",
+        "html-webpack-plugin": "^3.2.0",
+        "uglifyjs-webpack-plugin": "^1.2.4",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^2.0.14",
+        "webpack-dev-server": "^3.1.1",
+        "webpack-merge": "^4.1.2"
+    }
+}
