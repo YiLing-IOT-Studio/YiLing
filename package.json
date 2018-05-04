@@ -1,39 +1,50 @@
 {
-    "name": "yiling",
-    "version": "3.0.0",
-    "description": "翼灵物联工作室官方网站",
-    "main": "app.js",
-    "scripts": {
-        "build": "webpack --config webpack.prod.js --mode production",
-        "start": "webpack-dev-server --open --config webpack.dev.js --mode development"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/YiLing-IOT-Studio/YiLing.git"
-    },
-    "keywords": [
-        "翼灵",
-        "SWPU"
-    ],
-    "author": {
-        "name": "Leo",
-        "github": "https://github.com/swpuLeo/"
-    },
-    "bugs": {
-        "url": "https://github.com/YiLing-IOT-Studio/YiLing/issues"
-    },
-    "homepage": "https://github.com/YiLing-IOT-Studio/YiLing#readme",
-    "license": "MIT",
-    "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.4",
-        "babel-preset-env": "^1.6.1",
-        "clean-webpack-plugin": "^0.1.19",
-        "html-webpack-plugin": "^3.2.0",
-        "uglifyjs-webpack-plugin": "^1.2.4",
-        "webpack": "^4.5.0",
-        "webpack-cli": "^2.0.14",
-        "webpack-dev-server": "^3.1.1",
-        "webpack-merge": "^4.1.2"
-    }
+  "name": "yiling",
+  "version": "3.0.0",
+  "description": "翼灵物联工作室官方网站",
+  "main": "app.js",
+  "scripts": {
+    "server": "node .\\server\\app.js",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "start": "webpack-dev-server --config webpack.dev.js --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YiLing-IOT-Studio/YiLing.git"
+  },
+  "keywords": [
+    "翼灵",
+    "SWPU"
+  ],
+  "author": {
+    "name": "Leo",
+    "github": "https://github.com/swpuLeo/"
+  },
+  "bugs": {
+    "url": "https://github.com/YiLing-IOT-Studio/YiLing/issues"
+  },
+  "homepage": "https://github.com/YiLing-IOT-Studio/YiLing#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "cookie-parser": "^1.4.3",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "multer": "^1.3.0",
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.17.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  }
 }
