@@ -14,6 +14,7 @@ import java.util.List;
 /**
  * Created by 李攀 on 2017/12/3.
  * 将角色、用户和权限关联起来
+ *
  * @Entity 注解表明这个类为实体类，需要数据库建表
  */
 @Entity
@@ -30,7 +31,7 @@ public class Member implements UserDetails {
 
     private String password;
 
-    @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private List<Role> roles;
 
     @Override
